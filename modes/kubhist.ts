@@ -1,8 +1,10 @@
 import { App } from 'vue'
-// @ts-expect-error Ignore problem-marking in VSCode, not sure what the problem is
+// @ts-expect-error TODO Why is this module error-marked in VSCode?
+import { ModePluginOptions } from '@/types/app.types.ts'
+// @ts-expect-error TODO Why is this module error-marked in VSCode?
 import settings from '@instance/settings'
 
-export async function setup(app: App) {
-  console.log(`Kubhist, Vue ${app.version}`)
+export async function install(app: App, options: ModePluginOptions) {
+  console.log(`Kubhist, Vue ${app.version}`, Object.fromEntries(options.params.entries()))
   settings.description.eng = 'Kubhist description'
 }
