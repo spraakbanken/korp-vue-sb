@@ -1,5 +1,5 @@
 import { App } from 'vue'
-// TODO Squiggly red in vscode, but works fine
+// @ts-expect-error Ignore problem-marking in VSCode, not sure what the problem is
 import settings from '@instance/settings'
 
 export async function setup(app: App) {
