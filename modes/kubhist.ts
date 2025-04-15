@@ -6,5 +6,5 @@ import settings from '@instance/settings'
 
 export async function install(app: App, options: ModePluginOptions) {
   console.log(`Kubhist, Vue ${app.version}`, Object.fromEntries(options.params.entries()))
-  settings.description.eng = 'Kubhist description'
+  settings.korp_backend_url += '/kubhist'
 }
