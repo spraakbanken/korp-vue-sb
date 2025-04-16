@@ -1,2 +1,2 @@
-import de from './de.yaml'
-export default { de }
+import deu from './deu.yaml'
+export default { deu }
