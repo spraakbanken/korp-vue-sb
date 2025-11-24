@@ -1,16 +1,25 @@
 import type { Plugin } from "vue"
-import searchComponents from "@instance/components/search"
+import { componentInjectionKeys, injectionKeys } from "@/injection"
 import authBasic from "@/auth/basic"
+import BrandPrimary from "@instance/components/BrandPrimary.vue"
+import BrandSecondary from "@instance/components/BrandSecondary.vue"
+import searchComponents from "@instance/components/search"
 
 // An async function returning a Vue 3 plugin: https://vuejs.org/guide/reusability/plugins
 // It is wrapped in an async function so that we can await dynamically imported code if needed.
 export default async function createPlugin(options: { mode: string }): Promise<Plugin> {
   // Default installer
   const install: Plugin = (app) => {
-    // This is how we will provide named components and functions that can be referenced from config
-    app.provide("korp.components.search", searchComponents) // attribute extended_component
-    app.provide("korp.components.stringify", "...")
-    app.provide("korp.auth", authBasic)
+    // Provide services
+    app.provide(injectionKeys.auth, authBasic)
+
+    // Provide components
+    app.provide(componentInjectionKeys.BrandPrimary, BrandPrimary)
+    app.provide(componentInjectionKeys.BrandSecondary, BrandSecondary)
+
+    // Provide named components and functions that can be referenced from config
+    app.provide(injectionKeys.search.widgets, searchComponents) // attribute extended_component
+    app.provide(injectionKeys.attribute.stringifiers, { lemgram: () => "..." })
   }
 
   if (options.mode == "kubhist") {
