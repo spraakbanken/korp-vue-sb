@@ -4,6 +4,7 @@ import authBasic from "@/auth/basic"
 import BrandPrimary from "@instance/components/BrandPrimary.vue"
 import BrandSecondary from "@instance/components/BrandSecondary.vue"
 import searchComponents from "@instance/components/search"
+import formatters from "@instance/components/formatters"
 import settings from "./settings"
 import defaultExamples from "./modes/default-examples.yml"
 import type { SearchExample } from "@/core/config/instanceConfig.types"
@@ -26,16 +27,15 @@ export default async function createPlugin(options: {
 
     // Provide named components and functions that can be referenced from config
     app.provide(injectionKeys.search.widgets, searchComponents) // attribute extended_component
+    app.provide(injectionKeys.attribute.formatters, formatters) // attribute sidebar_component
 
     app.provide(injectionKeys.attribute.stringifiers, {
       /** Compound lemgrams separated by "+" */
       complemgram: (item) =>
-        (typeof item == "string" &&
-          item
-            .split("+")
-            .map((part) => Lemgram.parse(part)?.toHtml(options.t) || part)
-            .join(" + ")) ||
-        String(item),
+        item
+          .split("+")
+          .map((part) => Lemgram.parse(part)?.toHtml(options.t) || part)
+          .join(" + "),
     })
   }
 
