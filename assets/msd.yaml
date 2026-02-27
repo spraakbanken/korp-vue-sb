@@ -1,0 +1,698 @@
+- label:
+    eng: Adjective
+    swe: Adjektiv
+  options:
+    - msd: JJ.AN
+      label:
+        eng: adjective abbreviation
+        swe: adjektiv förkortning
+    - msd: JJ.KOM.UTR+NEU.SIN+PLU.IND+DEF.GEN
+      label:
+        eng: adjective comparative non-neuter/neuter singular/plural indefinite/definite
+          genitive
+        swe: adjektiv komparativ utrum/neutrum singularis/pluralis obestämd/bestämd genitiv
+    - msd: JJ.KOM.UTR+NEU.SIN+PLU.IND+DEF.NOM
+      label:
+        eng: adjective comparative non-neuter/neuter singular/plural indefinite/definite
+          nominative
+        swe: adjektiv komparativ utrum/neutrum singularis/pluralis obestämd/bestämd nominativ
+    - msd: JJ.KOM.UTR+NEU.SIN+PLU.IND+DEF.SMS
+      label:
+        eng: adjective comparative non-neuter/neuter singular/plural indefinite/definite
+          compound
+        swe: adjektiv komparativ utrum/neutrum singularis/pluralis obestämd/bestämd sammansättningsform
+    - msd: JJ.POS.MAS.SIN.DEF.GEN
+      label:
+        eng: adjective positive masculine singular definite genitive
+        swe: adjektiv positiv maskulinum singularis bestämd genitiv
+    - msd: JJ.POS.MAS.SIN.DEF.NOM
+      label:
+        eng: adjective positive masculine singular definite nominative
+        swe: adjektiv positiv maskulinum singularis bestämd nominativ
+    - msd: JJ.POS.NEU.SIN.IND.GEN
+      label:
+        eng: adjective positive neuter singular indefinite genitive
+        swe: adjektiv positiv neutrum singularis obestämd genitiv
+    - msd: JJ.POS.NEU.SIN.IND.NOM
+      label:
+        eng: adjective positive neuter singular indefinite nominative
+        swe: adjektiv positiv neutrum singularis obestämd nominativ
+    - msd: JJ.POS.NEU.SIN.IND+DEF.NOM
+      label:
+        eng: adjective positive neuter singular indefinite/definite nominative
+        swe: adjektiv positiv neutrum singularis obestämd/bestämd nominativ
+    - msd: JJ.POS.UTR.-.-.SMS
+      label:
+        eng: adjective positive non-neuter compound
+        swe: adjektiv positiv utrum sammansättningsform
+    - msd: JJ.POS.UTR.SIN.IND.GEN
+      label:
+        eng: adjective positive non-neuter singular indefinite genitive
+        swe: adjektiv positiv utrum singularis obestämd genitiv
+    - msd: JJ.POS.UTR.SIN.IND.NOM
+      label:
+        eng: adjective positive non-neuter singular indefinite nominative
+        swe: adjektiv positiv utrum singularis obestämd nominativ
+    - msd: JJ.POS.UTR.SIN.IND+DEF.NOM
+      label:
+        eng: adjective positive non-neuter singular indefinite/definite nominative
+        swe: adjektiv positiv utrum singularis obestämd/bestämd nominativ
+    - msd: JJ.POS.UTR+NEU.PLU.IND.NOM
+      label:
+        eng: adjective positive non-neuter/neuter plural indefinite nominative
+        swe: adjektiv positiv utrum/neutrum pluralis obestämd nominativ
+    - msd: JJ.POS.UTR+NEU.PLU.IND+DEF.GEN
+      label:
+        eng: adjective positive non-neuter/neuter plural indefinite/definite genitive
+        swe: adjektiv positiv utrum/neutrum pluralis obestämd/bestämd genitiv
+    - msd: JJ.POS.UTR+NEU.PLU.IND+DEF.NOM
+      label:
+        eng: adjective positive non-neuter/neuter plural indefinite/definite nominative
+        swe: adjektiv positiv utrum/neutrum pluralis obestämd/bestämd nominativ
+    - msd: JJ.POS.UTR+NEU.-.-.SMS
+      label:
+        eng: adjective positive non-neuter/neuter compound
+        swe: adjektiv positiv utrum/neutrum sammansättningsform
+    - msd: JJ.POS.UTR+NEU.SIN.DEF.GEN
+      label:
+        eng: adjective positive non-neuter/neuter singular definite genitive
+        swe: adjektiv positiv utrum/neutrum singularis bestämd genitiv
+    - msd: JJ.POS.UTR+NEU.SIN.DEF.NOM
+      label:
+        eng: adjective positive non-neuter/neuter singular definite nominative
+        swe: adjektiv positiv utrum/neutrum singularis bestämd nominativ
+    - msd: JJ.POS.UTR+NEU.SIN+PLU.IND.NOM
+      label:
+        eng: adjective positive non-neuter/neuter singular/plural indefinite nominative
+        swe: adjektiv positiv utrum/neutrum singularis/pluralis obestämd nominativ
+    - msd: JJ.POS.UTR+NEU.SIN+PLU.IND+DEF.NOM
+      label:
+        eng: adjective positive non-neuter/neuter singular/plural indefinite/definite
+          nominative
+        swe: adjektiv positiv utrum/neutrum singularis/pluralis obestämd/bestämd nominativ
+    - msd: JJ.SUV.MAS.SIN.DEF.GEN
+      label:
+        eng: adjective superlative masculine singular definite genitive
+        swe: adjektiv superlativ maskulinum singularis bestämd genitiv
+    - msd: JJ.SUV.MAS.SIN.DEF.NOM
+      label:
+        eng: adjective superlative masculine singular definite nominative
+        swe: adjektiv superlativ maskulinum singularis bestämd nominativ
+    - msd: JJ.SUV.UTR+NEU.PLU.DEF.NOM
+      label:
+        eng: adjective superlative non-neuter/neuter plural definite nominative
+        swe: adjektiv superlativ utrum/neutrum pluralis bestämd nominativ
+    - msd: JJ.SUV.UTR+NEU.PLU.IND.NOM
+      label:
+        eng: adjective superlative non-neuter/neuter plural indefinite nominative
+        swe: adjektiv superlativ utrum/neutrum pluralis obestämd nominativ
+    - msd: JJ.SUV.UTR+NEU.SIN+PLU.DEF.NOM
+      label:
+        eng: adjective superlative non-neuter/neuter singular/plural definite nominative
+        swe: adjektiv superlativ utrum/neutrum singularis/pluralis bestämd nominativ
+    - msd: JJ.SUV.UTR+NEU.SIN+PLU.IND.NOM
+      label:
+        eng: adjective superlative non-neuter/neuter singular/plural indefinite nominative
+        swe: adjektiv superlativ utrum/neutrum singularis/pluralis obestämd nominativ
+- label: Adverb
+  options:
+    - msd: AB
+      label: Adverb
+    - msd: AB.AN
+      label:
+        eng: adverb abbreviation
+        swe: adverb förkortning
+    - msd: AB.KOM
+      label:
+        eng: adverb comparative
+        swe: adverb komparativ
+    - msd: AB.POS
+      label:
+        eng: adverb positive
+        swe: adverb positiv
+    - msd: AB.SMS
+      label:
+        eng: adverb compound
+        swe: adverb sammansättningsform
+    - msd: AB.SUV
+      label:
+        eng: adverb superlative
+        swe: adverb superlativ
+- label:
+    eng: Determiner
+    swe: Determinerare
+  options:
+    - msd: DT.AN
+      label:
+        eng: determiner abbreviation
+        swe: determinerare förkortning
+    - msd: DT.MAS.SIN.DEF
+      label:
+        eng: determiner masculine singular definite
+        swe: determinerare maskulinum singularis bestämd
+    - msd: DT.MAS.SIN.IND
+      label:
+        eng: determiner masculine singular indefinite
+        swe: determinerare maskulinum singularis obestämd
+    - msd: DT.NEU.SIN.DEF
+      label:
+        eng: determiner neuter singular definite
+        swe: determinerare neutrum singularis bestämd
+    - msd: DT.NEU.SIN.IND
+      label:
+        eng: determiner neuter singular indefinite
+        swe: determinerare neutrum singularis obestämd
+    - msd: DT.NEU.SIN.IND+DEF
+      label:
+        eng: determiner neuter singular indefinite/definite
+        swe: determinerare neutrum singularis obestämd/bestämd
+    - msd: DT.UTR.SIN.DEF
+      label:
+        eng: determiner non-neuter singular definite
+        swe: determinerare utrum singularis bestämd
+    - msd: DT.UTR.SIN.IND
+      label:
+        eng: determiner non-neuter singular indefinite
+        swe: determinerare utrum singularis obestämd
+    - msd: DT.UTR.SIN.IND+DEF
+      label:
+        eng: determiner non-neuter singular indefinite/definite
+        swe: determinerare utrum singularis obestämd/bestämd
+    - msd: DT.UTR+NEU.PLU.DEF
+      label:
+        eng: determiner non-neuter/neuter plural definite
+        swe: determinerare utrum/neutrum pluralis bestämd
+    - msd: DT.UTR+NEU.PLU.IND
+      label:
+        eng: determiner non-neuter/neuter plural indefinite
+        swe: determinerare utrum/neutrum pluralis obestämd
+    - msd: DT.UTR+NEU.PLU.IND+DEF
+      label:
+        eng: determiner non-neuter/neuter plural indefinite/definite
+        swe: determinerare utrum/neutrum pluralis obestämd/bestämd
+    - msd: DT.UTR+NEU.SIN.DEF
+      label:
+        eng: determiner non-neuter/neuter singular definite
+        swe: determinerare utrum/neutrum singularis bestämd
+    - msd: DT.UTR+NEU.SIN.IND
+      label:
+        eng: determiner non-neuter/neuter singular indefinite
+        swe: determinerare utrum/neutrum singularis obestämd
+    - msd: DT.UTR+NEU.SIN+PLU.IND
+      label:
+        eng: determiner non-neuter/neuter singular/plural indefinite
+        swe: determinerare utrum/neutrum singularis/pluralis obestämd
+- label:
+    eng: Proper noun
+    swe: Egennamn
+  options:
+    - msd: PM.GEN
+      label:
+        eng: proper noun genitive
+        swe: egennamn genitiv
+    - msd: PM.NOM
+      label:
+        eng: proper noun nominative
+        swe: egennamn nominativ
+    - msd: PM.SMS
+      label:
+        eng: proper noun compound
+        swe: egennamn sammansättningsform
+- label:
+    eng: Interrogative/relative expression
+    swe: Fråge-/relativuttryck
+  options:
+    - msd: HD.NEU.SIN.IND
+      label:
+        eng: interrogative/relative determiner neuter singular indefinite
+        swe: frågande/relativ determinerare neutrum singularis obestämd
+    - msd: HD.UTR.SIN.IND
+      label:
+        eng: interrogative/relative determiner non-neuter singular indefinite
+        swe: frågande/relativ determinerare utrum singularis obestämd
+    - msd: HD.UTR+NEU.PLU.IND
+      label:
+        eng: interrogative/relative determiner non-neuter/neuter plural indefinite
+        swe: frågande/relativ determinerare utrum/neutrum pluralis obestämd
+    - msd: HA
+      label:
+        eng: interrogative/relative adverb
+        swe: frågande/relativt adverb
+    - msd: HS.DEF
+      label:
+        eng: interrogative/relative possessive pronomen definite
+        swe: frågande/relativt possesivt pronomen bestämd
+    - msd: HP.NEU.SIN.IND.SMS
+      label:
+        eng: interrogative/relative pronoun neuter singular indefinite compound
+        swe: frågande/relativt pronomen neutrum singularis obestämd sammansättningsform
+    - msd: HP.NEU.SIN.IND
+      label:
+        eng: interrogative/relative pronoun neuter singular indefinite
+        swe: frågande/relativt pronomen neutrum singularis obestämd
+    - msd: HP.UTR.SIN.IND
+      label:
+        eng: interrogative/relative pronoun non-neuter singular indefinite
+        swe: frågande/relativt pronomen utrum singularis obestämd
+    - msd: HP.UTR+NEU.PLU.IND
+      label:
+        eng: interrogative/relative pronoun non-neuter/neuter plural indefinite
+        swe: frågande/relativt pronomen utrum/neutrum pluralis obestämd
+    - msd: HP.-.-.-
+      label:
+        eng: interrogative/relative pronoun
+        swe: frågande/relativt pronomen
+- label:
+    eng: Infinitive marker
+    swe: Infinitivmärke
+  options:
+    - msd: IE
+      label:
+        eng: infinitive marker
+        swe: infinitivmärke
+- label:
+    eng: Interjection
+    swe: Interjektion
+  options:
+    - msd: IN
+      label:
+        eng: interjection
+        swe: interjektion
+- label:
+    eng: Punctuation
+    swe: Interpunktion
+  options:
+    - msd: MAD
+      label:
+        eng: major delimiter
+        swe: meningsskiljande interpunktion
+    - msd: MID
+      label:
+        eng: minor delimiter
+        swe: annan avskiljande interpunktion
+    - msd: PAD
+      label:
+        eng: pairwise delimiter
+        swe: omslutande interpunktion
+- label:
+    eng: Conjunction
+    swe: Konjunktion
+  options:
+    - msd: KN
+      label:
+        eng: conjunction
+        swe: konjunktion
+    - msd: KN.AN
+      label:
+        eng: conjunction abbreviation
+        swe: konjunktion förkortning
+- label:
+    eng: Participle
+    swe: Particip
+  options:
+    - msd: PC.AN
+      label:
+        eng: participle abbreviation
+        swe: particip förkortning
+    - msd: PC.PRF.MAS.SIN.DEF.GEN
+      label:
+        eng: participle perfect masculine singular definite genitive
+        swe: particip perfekt maskulinum singularis bestämd genitiv
+    - msd: PC.PRF.MAS.SIN.DEF.NOM
+      label:
+        eng: participle perfect masculine singular definite nominative
+        swe: particip perfekt maskulinum singularis bestämd nominativ
+    - msd: PC.PRF.NEU.SIN.IND.NOM
+      label:
+        eng: participle perfect neuter singular indefinite nominative
+        swe: particip perfekt neutrum singularis obestämd nominativ
+    - msd: PC.PRF.UTR.SIN.IND.GEN
+      label:
+        eng: participle perfect non-neuter singular indefinite genitive
+        swe: particip perfekt utrum singularis obestämd genitiv
+    - msd: PC.PRF.UTR.SIN.IND.NOM
+      label:
+        eng: participle perfect non-neuter singular indefinite nominative
+        swe: particip perfekt utrum singularis obestämd nominativ
+    - msd: PC.PRF.UTR+NEU.PLU.IND+DEF.GEN
+      label:
+        eng: participle perfect non-neuter/neuter plural indefinite/definite genitive
+        swe: particip perfekt utrum/neutrum pluralis obestämd/bestämd genitiv
+    - msd: PC.PRF.UTR+NEU.PLU.IND+DEF.NOM
+      label:
+        eng: participle perfect non-neuter/neuter plural indefinite/definite nominative
+        swe: particip perfekt utrum/neutrum pluralis obestämd/bestämd nominativ
+    - msd: PC.PRF.UTR+NEU.SIN.DEF.GEN
+      label:
+        eng: participle perfect non-neuter/neuter singular definite genitive
+        swe: particip perfekt utrum/neutrum singularis bestämd genitiv
+    - msd: PC.PRF.UTR+NEU.SIN.DEF.NOM
+      label:
+        eng: participle perfect non-neuter/neuter singular definite nominative
+        swe: particip perfekt utrum/neutrum singularis bestämd nominativ
+    - msd: PC.PRS.UTR+NEU.SIN+PLU.IND+DEF.GEN
+      label:
+        eng: participle present non-neuter/neuter singular/plural indefinite/definite
+          genitive
+        swe: particip presens utrum/neutrum singularis/pluralis obestämd/bestämd genitiv
+    - msd: PC.PRS.UTR+NEU.SIN+PLU.IND+DEF.NOM
+      label:
+        eng: participle present non-neuter/neuter singular/plural indefinite/definite
+          nominative
+        swe: particip presens utrum/neutrum singularis/pluralis obestämd/bestämd nominativ
+- label:
+    eng: Particle
+    swe: Partikel
+  options:
+    - msd: PL
+      label:
+        eng: particle
+        swe: partikel
+    - msd: PL.SMS
+      label:
+        eng: particle compound
+        swe: partikel sammansättningsform
+- label: Preposition
+  options:
+    - msd: PP
+      label:
+        eng: preposition
+        swe: preposition
+    - msd: PP.AN
+      label:
+        eng: preposition abbreviation
+        swe: preposition förkortning
+    - msd: PP.SMS
+      label:
+        eng: preposition compound
+        swe: preposition sammansättningsforms
+- label:
+    eng: Pronoun
+    swe: Pronomen
+  options:
+    - msd: PN.MAS.SIN.DEF.SUB+OBJ
+      label:
+        eng: pronoun masculine singular definite subject/object
+        swe: pronomen maskulinum singularis bestämd subjektsform/objektsform
+    - msd: PN.NEU.SIN.DEF.SUB+OBJ
+      label:
+        eng: pronoun neuter singular definite subject/object
+        swe: pronomen neutrum singularis bestämd subjektsform/objektsform
+    - msd: PN.NEU.SIN.IND.SUB+OBJ
+      label:
+        eng: pronoun neuter singular indefinite subject/object
+        swe: pronomen neutrum singularis obestämd subjektsform/objektsform
+    - msd: PN.UTR.PLU.DEF.OBJ
+      label:
+        eng: pronoun non-neuter plural definite object
+        swe: pronomen utrum pluralis bestämd objektsform
+    - msd: PN.UTR.PLU.DEF.SUB
+      label:
+        eng: pronoun non-neuter plural definite subject
+        swe: pronomen utrum pluralis bestämd subjektsform
+    - msd: PN.UTR.SIN.DEF.OBJ
+      label:
+        eng: pronoun non-neuter singular definite object
+        swe: pronomen utrum singularis bestämd objektsform
+    - msd: PN.UTR.SIN.DEF.SUB
+      label:
+        eng: pronoun non-neuter singular definite subject
+        swe: pronomen utrum singularis bestämd subjektsform
+    - msd: PN.UTR.SIN.DEF.SUB+OBJ
+      label:
+        eng: pronoun non-neuter singular definite subject/object
+        swe: pronomen utrum singularis bestämd subjektsform/objektsform
+    - msd: PN.UTR.SIN.IND.SUB
+      label:
+        eng: pronoun non-neuter singular indefinite subject
+        swe: pronomen utrum singularis obestämd subjektsform
+    - msd: PN.UTR.SIN.IND.SUB+OBJ
+      label:
+        eng: pronoun non-neuter singular indefinite subject/object
+        swe: pronomen utrum singularis obestämd subjektsform/objektsform
+    - msd: PN.UTR+NEU.PLU.DEF.OBJ
+      label:
+        eng: pronoun non-neuter/neuter plural definite object
+        swe: pronomen utrum/neutrum pluralis bestämd objektsform
+    - msd: PN.UTR+NEU.PLU.DEF.SUB
+      label:
+        eng: pronoun non-neuter/neuter plural definite subject
+        swe: pronomen utrum/neutrum pluralis bestämd subjektsform
+    - msd: PN.UTR+NEU.PLU.DEF.SUB+OBJ
+      label:
+        eng: pronoun non-neuter/neuter plural definite subject/object
+        swe: pronomen utrum/neutrum pluralis bestämd subjektsform/objektsform
+    - msd: PN.UTR+NEU.PLU.IND.SUB+OBJ
+      label:
+        eng: pronoun non-neuter/neuter plural indefinite subject/object
+        swe: pronomen utrum/neutrum pluralis obestämd subjektsform/objektsform
+    - msd: PN.UTR+NEU.SIN+PLU.DEF.OBJ
+      label:
+        eng: pronoun non-neuter/neuter singular/plural definite object
+        swe: pronomen utrum/neutrum singularis/pluralis bestämd objektsform
+    - msd: PS.AN
+      label:
+        eng: possessive abbreviation
+        swe: possesivt pronomen förkortning
+    - msd: PS.NEU.SIN.DEF
+      label:
+        eng: possessive neuter singular definite
+        swe: possesivt pronomen neutrum singularis bestämd
+    - msd: PS.UTR.SIN.DEF
+      label:
+        eng: possessive non-neuter singular definite
+        swe: possesivt pronomen utrum singularis bestämd
+    - msd: PS.UTR+NEU.PLU.DEF
+      label:
+        eng: possessive non-neuter/neuter plural definite
+        swe: possesivt pronomen utrum/neutrum pluralis bestämd
+    - msd: PS.UTR+NEU.SIN+PLU.DEF
+      label:
+        eng: possessive non-neuter/neuter singular/plural definite
+        swe: possesivt pronomen utrum/neutrum singularis/pluralis bestämd
+- label:
+    eng: Number
+    swe: Grundtal, ordningstal
+  options:
+    - msd: RG.GEN
+      label:
+        eng: cardinal number genitive
+        swe: grundtal genitiv
+    - msd: RG.NEU.SIN.IND.NOM
+      label:
+        eng: cardinal number neuter singular indefinite nominative
+        swe: grundtal neutrum singularis obestämd nominativ
+    - msd: RG.NOM
+      label:
+        eng: cardinal number nominative
+        swe: grundtal nominativ
+    - msd: RG.SMS
+      label:
+        eng: cardinal number compound
+        swe: grundtal sammansättningsform
+    - msd: RG.MAS.SIN.DEF.NOM
+      label:
+        eng: cardinal number singular definite nominative
+        swe: grundtal singularis bestämd nominativ
+    - msd: RG.UTR.SIN.IND.NOM
+      label:
+        eng: cardinal number non-neuter singular indefinite nominative
+        swe: grundtal utrum singularis obestämd nominativ
+    - msd: RG.UTR+NEU.SIN.DEF.NOM
+      label:
+        eng: cardinal number non-neuter/neuter singular definite nominative
+        swe: grundtal utrum/neutrum singularis bestämd nominativ
+    - msd: RO.GEN
+      label:
+        eng: ordinal number genitive
+        swe: ordningstal genitiv
+    - msd: RO.MAS.SIN.IND+DEF.GEN
+      label:
+        eng: ordinal number masculine singular indefinite/definite genitive
+        swe: ordningstal maskulinum singularis obestämd/bestämd genitiv
+    - msd: RO.MAS.SIN.IND+DEF.NOM
+      label:
+        eng: ordinal number masculine singular indefinite/definite nominative
+        swe: ordningstal maskulinum singularis obestämd/bestämd nominativ
+    - msd: RO.NOM
+      label:
+        eng: ordinal number nominative
+        swe: ordningstal nominativ
+    - msd: RO.UTR+NEU.SIN+PLU.IND+DEF.SMS
+      label:
+        eng: ordinal number non-neuter/neuter singular/plural indefinite/definite compound
+        swe: ordningstal utrum/neutrum singularis/pluralis obestämd/bestämd sammansättningsform
+- label:
+    eng: Subjunction
+    swe: Subjunktion
+  options:
+    - msd: SN
+      label:
+        eng: subjunction
+        swe: subjunktion
+- label:
+    eng: Noun
+    swe: Substantiv
+  options:
+    - msd: NN.-.-.-.-
+      label:
+        eng: noun
+        swe: substantiv
+    - msd: NN.AN
+      label:
+        eng: noun abbreviation
+        swe: substantiv förkortning
+    - msd: NN.NEU.PLU.DEF.GEN
+      label:
+        eng: noun neuter plural definite genitive
+        swe: substantiv neutrum pluralis bestämd genitiv
+    - msd: NN.NEU.PLU.DEF.NOM
+      label:
+        eng: noun neuter plural definite nominative
+        swe: substantiv neutrum pluralis bestämd nominativ
+    - msd: NN.NEU.PLU.IND.GEN
+      label:
+        eng: noun neuter plural indefinite genitive
+        swe: substantiv neutrum pluralis obestämd genitiv
+    - msd: NN.NEU.PLU.IND.NOM
+      label:
+        eng: noun neuter plural indefinite nominative
+        swe: substantiv neutrum pluralis obestämd nominativ
+    - msd: NN.NEU.-.-.SMS
+      label:
+        eng: noun neuter compound
+        swe: substantiv neutrum sammansättningsform
+    - msd: NN.NEU.SIN.DEF.GEN
+      label:
+        eng: noun neuter singular definite genitive
+        swe: substantiv neutrum singularis bestämd genitiv
+    - msd: NN.NEU.SIN.DEF.NOM
+      label:
+        eng: noun neuter singular definite nominative
+        swe: substantiv neutrum singularis bestämd nominativ
+    - msd: NN.NEU.SIN.IND.GEN
+      label:
+        eng: noun neuter singular indefinite genitive
+        swe: substantiv neutrum singularis obestämd genitiv
+    - msd: NN.NEU.SIN.IND.NOM
+      label:
+        eng: noun neuter singular indefinite nominative
+        swe: substantiv neutrum singularis obestämd nominativ
+    - msd: NN.NEU.-.-.-
+      label:
+        eng: noun neuter
+        swe: substantiv neutrum
+    - msd: NN.-.-.-.SMS
+      label:
+        eng: noun compound
+        swe: substantiv sammansättningsform
+    - msd: NN.UTR.PLU.DEF.GEN
+      label:
+        eng: noun non-neuter plural definite genitive
+        swe: substantiv utrum pluralis bestämd genitiv
+    - msd: NN.UTR.PLU.DEF.NOM
+      label:
+        eng: noun non-neuter plural definite nominative
+        swe: substantiv utrum pluralis bestämd nominativ
+    - msd: NN.UTR.PLU.IND.GEN
+      label:
+        eng: noun non-neuter plural indefinite genitive
+        swe: substantiv utrum pluralis obestämd genitiv
+    - msd: NN.UTR.PLU.IND.NOM
+      label:
+        eng: noun non-neuter plural indefinite nominative
+        swe: substantiv utrum pluralis obestämd nominativ
+    - msd: NN.UTR.-.-.SMS
+      label:
+        eng: noun non-neuter compound
+        swe: substantiv utrum sammansättningsform
+    - msd: NN.UTR.SIN.DEF.GEN
+      label:
+        eng: noun non-neuter singular definite genitive
+        swe: substantiv utrum singularis bestämd genitiv
+    - msd: NN.UTR.SIN.DEF.NOM
+      label:
+        eng: noun non-neuter singular definite nominative
+        swe: substantiv utrum singularis bestämd nominativ
+    - msd: NN.UTR.SIN.IND.GEN
+      label:
+        eng: noun non-neuter singular indefinite genitive
+        swe: substantiv utrum singularis obestämd genitiv
+    - msd: NN.UTR.SIN.IND.NOM
+      label:
+        eng: noun non-neuter singular indefinite nominative
+        swe: substantiv utrum singularis obestämd nominativ
+    - msd: NN.UTR.-.-.-
+      label:
+        eng: noun non-neuter
+        swe: substantiv utrum
+- label:
+    eng: Foreign word
+    swe: Utländskt ord
+  options:
+    - msd: UO
+      label:
+        eng: foreign word
+        swe: utländskt ord
+- label: Verb
+  options:
+    - msd: VB.AN
+      label:
+        eng: verb abbreviation
+        swe: verb förkortning
+    - msd: VB.IMP.AKT
+      label:
+        eng: verb imperative active
+        swe: verb imperativ aktiv
+    - msd: VB.IMP.SFO
+      label:
+        eng: verb imperative s-form
+        swe: verb imperativ s-form
+    - msd: VB.INF.AKT
+      label:
+        eng: verb infinitive active
+        swe: verb infinitiv aktiv
+    - msd: VB.INF.SFO
+      label:
+        eng: verb infinitive s-form
+        swe: verb infinitiv s-form
+    - msd: VB.KON.PRS.AKT
+      label:
+        eng: verb subjunctive present active
+        swe: verb konjunktiv presens aktiv
+    - msd: VB.KON.PRT.AKT
+      label:
+        eng: verb subjunctive preterite active
+        swe: verb konjunktiv preteritum aktiv
+    - msd: VB.KON.PRT.SFO
+      label:
+        eng: verb subjunctive preterite s-form
+        swe: verb konjunktiv preteritum s-form
+    - msd: VB.PRS.AKT
+      label:
+        eng: verb present active
+        swe: verb presens aktiv
+    - msd: VB.PRS.SFO
+      label:
+        eng: verb present s-form
+        swe: verb presens s-form
+    - msd: VB.PRT.AKT
+      label:
+        eng: verb preterite active
+        swe: verb preteritum aktiv
+    - msd: VB.PRT.SFO
+      label:
+        eng: verb preterite s-form
+        swe: verb preteritum s-form
+    - msd: VB.SMS
+      label:
+        eng: verb compound
+        swe: verb sammansättningsform
+    - msd: VB.SUP.AKT
+      label:
+        eng: verb supine active
+        swe: verb supinum aktiv
+    - msd: VB.SUP.SFO
+      label:
+        eng: verb supine s-form
+        swe: verb supinum s-form
