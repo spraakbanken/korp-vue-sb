@@ -1,7 +1,7 @@
 - label: Former av ordet "fågel" i skönlitteratur
   params:
     search: lemgram|fågel..nn.1
-    corpus: [aspacsv, rom99, romg, romi, romii, salnld-sv, storsuc]
+    corpus: [aspacsv, rom99, romg, romi, romii, saltnld-sv, storsuc]
   hint: Öppna fliken Statistik för att se en fördelning av ordformer
 - label:
     swe: Ord som börjar på "covid" i nyheter
