@@ -74,6 +74,34 @@ logo:
         <img src="img/gu_logo_sv_head.svg" class="h-full" />
     </a>
 
+navigation:
+  help_links:
+    - label:
+        swe: Om Korp
+        eng: About Korp
+      url:
+        swe: https://spraakbanken.gu.se/verktyg/korp
+        eng: https://spraakbanken.gu.se/en/tools/korp
+    - label:
+        swe: Användarhandledning
+        eng: User manual
+      url:
+        swe: https://spraakbanken.gu.se/verktyg/korp/anvandarhandledning
+        eng: https://spraakbanken.gu.se/en/tools/korp/user-manual
+    - label:
+        swe: Hur citerar jag Korp?
+        eng: How to cite Korp
+      url:
+        swe: https://spraakbanken.gu.se/om/referera#Korp
+        eng: https://spraakbanken.gu.se/en/about/howtocite#Korp
+  links:
+    - label:
+        swe: Korplabb
+        eng: Korp lab
+      url:
+        swe: https://spraakbanken.gu.se/korplabb/
+        eng: https://spraakbanken.gu.se/korplabb/#?lang=eng
+
 frontpage:
   corpus_updates: true
 
