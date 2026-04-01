@@ -1,4 +1,10 @@
 <script lang="ts" setup>
+/**
+ * Extended search widget for compound word-form attribute.
+ *
+ * Compounds are separated by `+`: `<wf>[+<wf>...]:<score>`.
+ * This widget wraps the default widget and modifies the regex to account for the compound format.
+ */
 import DefaultWidget, {
   type DefaultWidgetOptions,
 } from "@/search/extended/widgets/DefaultWidget.vue"
