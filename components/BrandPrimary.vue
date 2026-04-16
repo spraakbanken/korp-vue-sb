@@ -7,13 +7,17 @@ import korpSloganEng from "@instance/assets/korp_slogan_en.svg"
 import korpSloganEngLight from "@instance/assets/korp_slogan_en_light.svg"
 
 const { locale } = useI18n()
+
+const selfUrl = window.location.href.replace(/#.*/, "")
 </script>
 
 <template>
-  <ColorSchemeImg
-    :dark-src="locale == 'swe' ? korpSloganSweLight : korpSloganEngLight"
-    :light-src="locale == 'swe' ? korpSloganSwe : korpSloganEng"
-    alt="Korp slogan"
-    class="align-self-end"
-  />
+  <a :href="selfUrl">
+    <ColorSchemeImg
+      :dark-src="locale == 'swe' ? korpSloganSweLight : korpSloganEngLight"
+      :light-src="locale == 'swe' ? korpSloganSwe : korpSloganEng"
+      alt="Korp slogan"
+      class="align-self-end"
+    />
+  </a>
 </template>

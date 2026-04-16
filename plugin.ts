@@ -9,6 +9,7 @@ import settings from "./settings"
 import defaultExamples from "./modes/default-examples.yml"
 import type { SearchExample } from "@/core/config/instanceConfig.types"
 import { Lemgram } from "@/core/lemgram"
+import "./fontawesome"
 
 // An async function returning a Vue 3 plugin: https://vuejs.org/guide/reusability/plugins
 // It is wrapped in an async function so that we can await dynamically imported code if needed.
