@@ -8,8 +8,8 @@ import formatters from "@instance/components/formatters"
 import settings from "./settings"
 import defaultExamples from "./modes/default-examples.yml"
 import type { SearchExample } from "@/core/config/instanceConfig.types"
-import { Lemgram } from "@/core/lemgram"
 import "./fontawesome"
+import { getStringifiers } from "./components/stringifiers"
 
 // An async function returning a Vue 3 plugin: https://vuejs.org/guide/reusability/plugins
 // It is wrapped in an async function so that we can await dynamically imported code if needed.
@@ -30,14 +30,7 @@ export default async function createPlugin(options: {
     app.provide(injectionKeys.search.widgets, searchComponents) // attribute extended_component
     app.provide(injectionKeys.attribute.formatters, formatters) // attribute sidebar_component
 
-    app.provide(injectionKeys.attribute.stringifiers, {
-      /** Compound lemgrams separated by "+" */
-      complemgram: (item) =>
-        item
-          .split("+")
-          .map((part) => Lemgram.parse(part)?.toHtml(options.t) || part)
-          .join(" + "),
-    })
+    app.provide(injectionKeys.attribute.stringifiers, getStringifiers(options.t))
   }
 
   if (options.mode == "default") {

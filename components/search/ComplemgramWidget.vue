@@ -15,7 +15,7 @@ const model = defineModel<string>({
   required: true,
 
   // Remove the `+` and `:score` parts that we added when emitting
-  get: (value) => value.replace(/[\\+\.\*:]*$/, "").replace(/^\\\+/, ""),
+  get: (value) => value.replace(/[\\+.*:]*$/, "").replace(/^\\\+/, ""),
 
   // Emit selected lemgram with added `+` (or `:score`) to target a given part of the compound
   set: (value) => {
