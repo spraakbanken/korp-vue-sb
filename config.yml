@@ -120,11 +120,12 @@ group_statistics:
 statistics_search_default: false
 
 # for 'compile statistics by' selector, can be 'union' or 'intersection'
-reduce_word_attribute_selector: intersection
-reduce_struct_attribute_selector: intersection
+# reduce_word_attribute_selector: intersection
+# reduce_struct_attribute_selector: intersection
 
 matomo:
   url: https://spraakbanken.gu.se/stats/
+  site: 43
   # Enable real reporting only on live sites
   staging:
     site: 3
