@@ -34,7 +34,11 @@ const id = useId()
         :aria-label="$t('msd.menu')"
       ></button>
 
-      <ul class="dropdown-menu" :aria-labelledby="`${id}-help`">
+      <ul
+        class="dropdown-menu"
+        :aria-labelledby="`${id}-help`"
+        style="width: 40rem; max-width: 100svw"
+      >
         <template v-for="({ label, options }, i) in msdData" :key="i">
           <li>
             <h6 class="dropdown-header">
@@ -42,7 +46,7 @@ const id = useId()
             </h6>
           </li>
           <li v-for="{ msd, label } in options" :key="msd">
-            <a href="#" class="dropdown-item" @click.prevent="model = msd">
+            <a href="#" class="dropdown-item text-wrap" @click.prevent="model = msd">
               <strong>{{ msd }}</strong
               >: {{ locObj(label) }}
             </a>
