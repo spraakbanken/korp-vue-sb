@@ -1,5 +1,7 @@
-mink.login.ask: Do you want to log in?
-mink.login.help: This is the Mink mode in Korp. Only logged in users with access to Mink can use this mode.
+mink.empty: No corpora
+mink.empty.text: This is the Mink mode of Korp. You do not have any corpora to explore.
+mink.empty.create: Create your own corpora in {mink}
+mink.login.help: This is the Mink mode of Korp. Only logged in users with access to Mink can use this mode.
 mink.link.label: Learn more about Mink
 mink.link.url: https://spraakbanken.gu.se/mink/
 

@@ -20,6 +20,7 @@ export default async function createPlugin(options: {
   // Default installer
   const install: Plugin = (app) => {
     // Provide services
+    // TODO Re-providing auth in Mink mode gives a warning. Make basic auth the fallback instead?
     app.provide(injectionKeys.auth, authBasic)
 
     // Provide components

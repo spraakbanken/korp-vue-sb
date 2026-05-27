@@ -21,12 +21,6 @@ description:
       Om du använder Korp i ditt arbete ber vi dig <a href="https://spraakbanken.gu.se/om/referera">referera till oss</a>.
       För frågor och kommentarer, kontakta <a href="mailto:sb-info@svenska.gu.se" class="whitespace-nowrap">sb-info@svenska.gu.se</a>.
     </p>
-  deu: <p>Suchen bla bla</p>
-
-auth_module:
-  module: "basic_auth"
-  options:
-    default_value_remember: true
 
 autocomplete: true
 map_enabled: false
