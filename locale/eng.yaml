@@ -1,1 +1,6 @@
+mink.login.ask: Do you want to log in?
+mink.login.help: This is the Mink mode in Korp. Only logged in users with access to Mink can use this mode.
+mink.link.label: Learn more about Mink
+mink.link.url: https://spraakbanken.gu.se/mink/
+
 msd.menu: Show morpho-syntactic descriptors

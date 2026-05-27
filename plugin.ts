@@ -42,14 +42,18 @@ export default async function createPlugin(options: {
     const { default: kubhist } = await import("@instance/modes/kubhist")
     // Override installer to do additional stuff
     return (app) => {
-      install(app, options)
-      app.use(kubhist)
+      install(app)
+      kubhist(app)
     }
   }
 
   if (options.mode == "mink") {
     // Load separate mode plugin
-    return (await import("@instance/modes/mink")).default
+    const { default: mink } = await import("@instance/modes/mink")
+    return (app) => {
+      install(app)
+      mink(app)
+    }
   }
 
   // Use default installer unless overridden
