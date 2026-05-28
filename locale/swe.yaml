@@ -6,3 +6,10 @@ mink.link.label: Läs mer om Mink
 mink.link.url: https://spraakbanken.gu.se/mink/
 
 msd.menu: Visa morfosyntaktiska deskriptorer
+
+video.not_supported: Din webbläsare stöder inte video-taggen.
+video.play_all: Fortsätt
+video.replay: Spela om
+video.show: Visa inspelning
+video.span: Tid
+video.utterance: Yttrande

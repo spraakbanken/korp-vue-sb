@@ -1,9 +1,9 @@
 import type { MaybeConfigurable } from "@/core/config/config.types"
-import IvipVideo from "./IvipVideo.vue"
+import IvipVideoFormatter from "./IvipVideoFormatter.vue"
 import type { Formatter } from "@/results/formatter"
 
 const formatters: Record<string, MaybeConfigurable<Formatter>> = {
-  ivipVideo: { component: IvipVideo },
+  ivipVideo: (options) => ({ component: IvipVideoFormatter, options }),
 }
 
 export default formatters
