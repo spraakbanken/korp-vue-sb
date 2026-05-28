@@ -10,6 +10,7 @@ import defaultExamples from "./modes/default-examples.yml"
 import type { SearchExample } from "@/core/config/instanceConfig.types"
 import "./fontawesome"
 import { getStringifiers } from "./components/stringifiers"
+import { readers } from "./components/reader"
 
 // An async function returning a Vue 3 plugin: https://vuejs.org/guide/reusability/plugins
 // It is wrapped in an async function so that we can await dynamically imported code if needed.
@@ -30,6 +31,7 @@ export default async function createPlugin(options: {
     // Provide named components and functions that can be referenced from config
     app.provide(injectionKeys.search.widgets, searchComponents) // attribute extended_component
     app.provide(injectionKeys.attribute.formatters, formatters) // attribute sidebar_component
+    app.provide(injectionKeys.readers, readers)
 
     app.provide(injectionKeys.attribute.stringifiers, getStringifiers(options.t))
   }
