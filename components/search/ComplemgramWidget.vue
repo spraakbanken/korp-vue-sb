@@ -5,6 +5,7 @@
  * Compound lemgrams are separated by `+`: `<lemgram>[+<lemgram>...]:<score>`.
  * This widget wraps the standard lemgram widget and modifies the regex to account for the compound format.
  */
+import { regescape, unregescape } from "@/core/util"
 import LemgramAutocompleteWidget, {
   type LemgramAutocompleteOptions,
 } from "@/search/extended/widgets/LemgramAutocompleteWidget.vue"
@@ -15,18 +16,22 @@ const model = defineModel<string>({
   required: true,
 
   // Remove the `+` and `:score` parts that we added when emitting
-  get: (value) => value.replace(/[\\+.*:]*$/, "").replace(/^\\\+/, ""),
+  get: (value) =>
+    unregescape(value)
+      .replace(/[+.*:]*$/, "")
+      .replace(/^\+/, ""),
 
   // Emit selected lemgram with added `+` (or `:score`) to target a given part of the compound
   set: (value) => {
+    const escaped = regescape(value)
     if (["starts_with_contains", "not_starts_with_contains"].includes(props.operator))
-      return value + "\\+"
+      return escaped + "\\+"
     else if (["ends_with_contains", "not_ends_with_contains"].includes(props.operator))
-      return "\\+" + value + ":.*"
+      return "\\+" + escaped + ":.*"
     else if (["incontains_contains", "not_incontains_contains"].includes(props.operator))
-      return "\\+" + value + "\\+"
+      return "\\+" + escaped + "\\+"
 
-    return value
+    return escaped
   },
 })
 

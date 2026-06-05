@@ -9,6 +9,8 @@ msd.menu: Show morpho-syntactic descriptors
 
 result.formatter.copy_row: Copy row
 
+result.sidebar.search.complemgram: Find compounds with
+
 video.not_supported: Your browser does not support the video tag.
 video.play_all: Continue
 video.replay: Replay

@@ -9,6 +9,8 @@ msd.menu: Visa morfosyntaktiska deskriptorer
 
 result.formatter.copy_row: Kopiera rad
 
+result.sidebar.search.complemgram: Sök samman­sättningar med
+
 video.not_supported: Din webbläsare stöder inte video-taggen.
 video.play_all: Fortsätt
 video.replay: Spela om
