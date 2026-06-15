@@ -43,15 +43,6 @@ export default async function createPlugin(options: {
     settings.frontpage.examples = defaultExamples as SearchExample[]
   }
 
-  if (options.mode == "kubhist") {
-    const { default: kubhist } = await import("@instance/modes/kubhist")
-    // Override installer to do additional stuff
-    return (app) => {
-      install(app)
-      kubhist(app)
-    }
-  }
-
   if (options.mode == "mink") {
     // Load separate mode plugin
     const { default: mink } = await import("@instance/modes/mink")
