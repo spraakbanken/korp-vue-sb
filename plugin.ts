@@ -8,7 +8,6 @@ import formatters from "@instance/components/formatters"
 import settings from "./settings"
 import defaultExamples from "./modes/default-examples.yml"
 import type { SearchExample } from "@/core/config/instanceConfig.types"
-import "./fontawesome"
 import { getStringifiers } from "./components/stringifiers"
 import { readers } from "./components/reader"
 
@@ -35,6 +34,9 @@ export default async function createPlugin(options: {
 
     app.provide(injectionKeys.attribute.stringifiers, getStringifiers(options.t))
   }
+
+  // Add icons used in instance code
+  import("./fontawesome")
 
   if (options.mode == "default") {
     settings.frontpage ??= {}
