@@ -92,6 +92,9 @@ navigation:
     - label:
         swe: Korplabb
         eng: Korp lab
+      title:
+        swe: Testa nya funktioner i Korplabbet
+        eng: Try out new features in the Korp Lab
       url:
         swe: https://spraakbanken.gu.se/korplabb/
         eng: https://spraakbanken.gu.se/korplabb/#?lang=eng
