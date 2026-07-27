@@ -11,8 +11,7 @@ const widgets: Record<string, MaybeConfigurable<Widget>> = {
     noescape: true,
     options: { variant: "affix" },
   },
-  // TODO Add `case_sensitive: true` to config
-  compwf: { component: CompwfWidget, noescape: true, options: { case_sensitive: true } },
+  compwf: { component: CompwfWidget, noescape: true },
 }
 
 export default widgets

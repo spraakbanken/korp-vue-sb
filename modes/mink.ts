@@ -31,7 +31,7 @@ export default async function install(app: App) {
   settings.get_corpus_ids = async () => {
     if (!auth.isLoggedIn()) return undefined
     // Fetch user's corpus ids from Mink
-    const minkUrl = "https://spraakbanken2.it.gu.se/ws/mink/v2"
+    const minkUrl = "https://spraakbanken2.it.gu.se/ws/mink/v3"
     const conf = { headers: auth.getAuthorizationHeader() }
     const response = await fetch(`${minkUrl}/list-korp-corpora`, conf)
     const data = await response.json()

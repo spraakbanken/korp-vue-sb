@@ -29,7 +29,6 @@ onMounted(() => {
 <template>
   <AuthFedStatus />
 
-  <!-- TODO Button label "Log in" -->
   <ModalDialog
     @setup="loginDialog = $event"
     :title="$t('auth.login')"
