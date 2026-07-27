@@ -17,12 +17,11 @@ export default async function createPlugin(options: {
   mode: string
   t: (key: string) => string
 }): Promise<Plugin> {
-  // Default installer
-  const install: Plugin = (app) => {
-    // Provide services
-    // TODO Re-providing auth in Mink mode gives a warning. Make basic auth the fallback instead?
-    app.provide(injectionKeys.auth, authBasic({ defaultRemember: true }))
+  // Destructure options
+  const { mode, t } = options
 
+  // Default installer
+  const installCommon: Plugin = (app) => {
     // Provide components
     app.provide(componentInjectionKeys.BrandPrimary, BrandPrimary)
     app.provide(componentInjectionKeys.BrandSecondary, BrandSecondary)
@@ -30,28 +29,33 @@ export default async function createPlugin(options: {
     // Provide named components and functions that can be referenced from config
     app.provide(injectionKeys.search.widgets, searchComponents) // attribute extended_component
     app.provide(injectionKeys.attribute.formatters, formatters) // attribute sidebar_component
+    app.provide(injectionKeys.attribute.stringifiers, getStringifiers(t))
     app.provide(injectionKeys.readers, readers)
 
-    app.provide(injectionKeys.attribute.stringifiers, getStringifiers(options.t))
+    // Add icons used in instance code
+    import("./fontawesome")
   }
 
-  // Add icons used in instance code
-  import("./fontawesome")
+  // Mode-specific configuration
 
-  if (options.mode == "default") {
+  if (mode == "default") {
     settings.frontpage ??= {}
     settings.frontpage.examples = defaultExamples as SearchExample[]
   }
 
-  if (options.mode == "mink") {
+  if (mode == "mink") {
     // Load separate mode plugin
-    const { default: mink } = await import("@instance/modes/mink")
+    const { default: installMink } = await import("@instance/modes/mink")
     return (app) => {
-      install(app)
-      mink(app)
+      installCommon(app)
+      installMink(app)
     }
   }
 
-  // Use default installer unless overridden
-  return install
+  // Default installer
+  return (app) => {
+    installCommon(app)
+    // Use basic auth
+    app.provide(injectionKeys.auth, authBasic({ defaultRemember: true }))
+  }
 }
