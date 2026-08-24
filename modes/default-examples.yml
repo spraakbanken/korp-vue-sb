@@ -212,7 +212,7 @@
     cqp: '[word _= "mörk" %c]'
     corpus: [poeter]
     result_tab: 2
-    stats_reduce: lemma
+    stats_reduce: [lemma]
 - label: Krig i nyheterna
   hint: Testa trenddiagrammet!
   params:

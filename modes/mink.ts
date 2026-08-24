@@ -78,7 +78,7 @@ export default async function install(app: App) {
           search: "cqp",
           cqp: '[pos = "VB"]',
           search_tab: 1,
-          stats_reduce: "lemma",
+          stats_reduce: ["lemma"],
           result_tab: 2,
         },
       },
