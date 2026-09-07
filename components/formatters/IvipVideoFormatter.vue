@@ -2,7 +2,7 @@
 /** @file Formatter for showing a video clip in a dialog */
 import ModalDialog, { type ConfirmDialog } from "@/components/ModalDialog.vue"
 import { isKwicRowToken } from "@/core/kwic/kwic"
-import { transformSeconds } from "@/core/util"
+import { transformSeconds } from "@/core/time"
 import { type FormatterProps } from "@/results/formatter"
 import { whenever } from "@vueuse/core"
 import { computed, ref, useTemplateRef, watch } from "vue"
