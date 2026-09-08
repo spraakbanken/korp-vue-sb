@@ -1,17 +1,19 @@
 <script lang="ts" setup>
+import { useTheme } from "@/components/useTheme"
 import { type KwicRow, type KwicRowToken } from "@/core/kwic/kwic"
+import { fromKeys, goldenOklch } from "@/core/util"
 import { injectionKeys } from "@/injection"
 import KwicToken from "@/results/kwic/KwicToken.vue"
 import type { ReaderProps } from "@/results/text/text"
 import { groupBy, pickBy, uniq } from "lodash-es"
 import { computed, inject, ref, useTemplateRef, watch, type Ref } from "vue"
 
-const COLORS = ["#888", "#1565c0", "#388e3c", "#00838f", "#ff3333", "#ff7700"]
-
 const props = defineProps<ReaderProps>()
 
 const selectedToken = inject(injectionKeys.selectedToken) as Ref<KwicRowToken | undefined>
 const video = useTemplateRef("video")
+const theme = useTheme()
+
 /** Current video playback position in seconds */
 const playpos = ref<number>()
 
@@ -38,9 +40,12 @@ const sentences = computed<KwicRow[]>(() => {
   })
 })
 
-const speakers = computed(() =>
-  uniq(["paus", ...props.document.tokens.map((t) => t.attrs.sentence_speaker_id).filter(Boolean)]),
-)
+/** Mapping from IVIP speaker ids to color */
+const colors = computed(() => {
+  const palette = goldenOklch(theme.primary)
+  const speakers = uniq(props.document.tokens.map((t) => t.attrs.sentence_speaker_id!))
+  return fromKeys(speakers, (key) => (key == "paus" ? undefined : palette.next().value))
+})
 
 // Sync video playtime to ref
 watch(video, () => {
@@ -75,8 +80,10 @@ function isSentencePlaying(row: KwicRow) {
       v-for="row in sentences"
       :key="row.structs.sentence_id!"
       class="hstack align-items-baseline gap-3"
-      :class="{ 'bg-success-subtle': isSentencePlaying(row) }"
-      :style="{ color: COLORS[speakers.indexOf(row.structs.sentence_speaker_id!) % COLORS.length] }"
+      :class="{ 'bg-warning-subtle': isSentencePlaying(row) }"
+      :style="{
+        color: colors[row.structs.sentence_speaker_id!] || 'rgb(from currentColor r g b / 0.75)',
+      }"
     >
       <strong style="width: 3em">{{ row.structs.sentence_speaker_id }}</strong>
       <div class="font-monospace small" style="white-space: pre">
