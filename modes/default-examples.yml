@@ -96,7 +96,6 @@
         lt2006,
         smittskydd,
       ]
-  $$hashKey: object:107
 - label: Ordet "örfil" i finlandssvenska texter
   params:
     search_tab: 1
@@ -282,7 +281,6 @@
     search_tab: 1
     search: cqp
     cqp: <sentence> []{3,3}
-  $$hashKey: object:108
 - label: Futurum preteritum i kursböcker
   hint: Läs mer om <a href="https://spraakbanken.gu.se/resurser/coctaill" target="_blank">COCTAILL-korpusen</a>
   params:
@@ -291,7 +289,6 @@
     cqp: '[lex contains "skola..vb.2" & msd = "VB.PRT.AKT" & _.lesson_cefr_level =
       "C1"] [pos != "VB"]{0,6} [pos = "VB"]'
     corpus: [coctaill-ae, coctaill-lt]
-  $$hashKey: object:109
 - label: den + singular ("den värsta sjukdom")
   params:
     search_tab: 1
