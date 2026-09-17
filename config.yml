@@ -8,7 +8,7 @@ description:
     </p>
     <p>
       If you are using Korp in your work, please <a href="https://spraakbanken.gu.se/en/about/howtocite" target="_blank">cite us</a>.
-      For questions or comments, contact us at <a href="mailto:sb-info@svenska.gu.se" class="whitespace-nowrap">sb-info@svenska.gu.se</a>.
+      For questions or comments, contact us at <a href="mailto:info@sprakbanken.se" class="whitespace-nowrap">info@sprakbanken.se</a>.
     </p>
   swe: |
     <p><strong>Korp</strong> är Språkbankens ordforskningsplattform.</p>
@@ -19,7 +19,7 @@ description:
     </p>
     <p>
       Om du använder Korp i ditt arbete ber vi dig <a href="https://spraakbanken.gu.se/om/referera">referera till oss</a>.
-      För frågor och kommentarer, kontakta <a href="mailto:sb-info@svenska.gu.se" class="whitespace-nowrap">sb-info@svenska.gu.se</a>.
+      För frågor och kommentarer, kontakta <a href="mailto:info@sprakbanken.se" class="whitespace-nowrap">info@sprakbanken.se</a>.
     </p>
 
 autocomplete: true
@@ -34,8 +34,8 @@ hits_per_page_values:
 
 corpus_info_link:
   url_template:
-    swe: https://spraakbanken.gu.se/resurser/%s
-    eng: https://spraakbanken.gu.se/en/resources/%s
+    swe: https://sprakbanken.se/resurser/%s
+    eng: https://sprakbanken.se/en/resources/%s
   label:
     swe: Mer information
     eng: More information
@@ -49,24 +49,6 @@ languages:
     label: English
   - value: swe
     label: Svenska
-
-logo:
-  korp: |
-    <img ng-if="$root.lang == 'swe'" src="img/korp_slogan.svg" height="300" width="300" />
-    <img ng-if="$root.lang != 'swe'" src="img/korp_slogan_en.svg" height="300" width="300" />
-  organization: |
-    <a
-        class="hidden min-[1150px]:flex h-20 shrink flex-col justify-end"
-        href="https://spraakbanken.gu.se/"
-        target="_blank"
-    >
-        <img ng-if="$root.lang == 'swe'" src="img/sprakbanken_text_slogan.svg" />
-        <img ng-if="$root.lang != 'swe'" src="img/sprakbanken_text_slogan_en.svg" />
-    </a>
-
-    <a class="hidden xl:block shrink-0 h-32 -mt-2" href="https://gu.se/" target="_blank">
-        <img src="img/gu_logo_sv_head.svg" class="h-full" />
-    </a>
 
 navigation:
   help_links:
@@ -86,8 +68,8 @@ navigation:
         swe: Hur citerar jag Korp?
         eng: How to cite Korp
       url:
-        swe: https://spraakbanken.gu.se/om/referera#Korp
-        eng: https://spraakbanken.gu.se/en/about/howtocite#Korp
+        swe: https://sprakbanken.se/om/referera-till-oss#Korp
+        eng: https://sprakbanken.se/en/about/how-to-cite#Korp
   links:
     - label:
         swe: Korplabb
@@ -98,6 +80,15 @@ navigation:
       url:
         swe: https://spraakbanken.gu.se/korplabb/
         eng: https://spraakbanken.gu.se/korplabb/#?lang=eng
+    - label:
+        swe: Korp 9 (tidigare version)
+        eng: Korp 9 (previous version)
+      title:
+        swe: Om något inte fungerar som det ska, testa Korp 9
+        eng: If something does not work as it should, try Korp 9
+      url:
+        swe: https://spraakbanken.gu.se/korp9/
+        eng: https://spraakbanken.gu.se/korp9/#?lang=eng
 
 frontpage:
   corpus_updates: true

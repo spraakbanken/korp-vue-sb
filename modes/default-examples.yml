@@ -282,7 +282,7 @@
     search: cqp
     cqp: <sentence> []{3,3}
 - label: Futurum preteritum i kursböcker
-  hint: Läs mer om <a href="https://spraakbanken.gu.se/resurser/coctaill" target="_blank">COCTAILL-korpusen</a>
+  hint: Läs mer om <a href="https://sprakbanken.se/resurser/coctaill" target="_blank">COCTAILL-korpusen</a>
   params:
     search_tab: 1
     search: cqp
