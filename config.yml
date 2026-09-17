@@ -80,15 +80,6 @@ navigation:
       url:
         swe: https://spraakbanken.gu.se/korplabb/
         eng: https://spraakbanken.gu.se/korplabb/#?lang=eng
-    - label:
-        swe: Korp 9 (tidigare version)
-        eng: Korp 9 (previous version)
-      title:
-        swe: Om något inte fungerar som det ska, testa Korp 9
-        eng: If something does not work as it should, try Korp 9
-      url:
-        swe: https://spraakbanken.gu.se/korp9/
-        eng: https://spraakbanken.gu.se/korp9/#?lang=eng
 
 frontpage:
   corpus_updates: true
