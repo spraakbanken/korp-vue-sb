@@ -52,11 +52,6 @@ export default async function createPlugin(options: {
     }
   }
 
-  if (mode == "npegl") {
-    // NPEGL is not supported yet, redirect to the old version
-    window.location.href = window.location.href.replace(/korp(labb)?\b/, "korp9")
-  }
-
   // Default installer
   return (app) => {
     installCommon(app)
