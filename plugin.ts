@@ -52,6 +52,14 @@ export default async function createPlugin(options: {
     }
   }
 
+  if (mode == "npegl") {
+    const { default: installNpegl } = await import("@instance/modes/npegl")
+    return (app) => {
+      installCommon(app)
+      installNpegl(app)
+    }
+  }
+
   // Default installer
   return (app) => {
     installCommon(app)
