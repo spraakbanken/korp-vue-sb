@@ -1,7 +1,7 @@
 import {
   type AbsRelSeq,
   type PhraseLevelDisjunctionRow,
-  type SingleRow,
+  type StandardSingleRow,
   type StatisticsProcessed,
 } from "@/core/statistics/statistics.types"
 import { injectionKeys } from "@/injection"
@@ -34,7 +34,7 @@ function npeglStatisticsPostprocess(result: StatisticsProcessed): StatisticsProc
 
   // Group rows that have the same representation of the e_cat attribute (e.g. [a:1 a:1] == [a:1])
   // Skip the totals row
-  const singleRows = rows.slice(1) as SingleRow[]
+  const singleRows = rows.slice(1) as StandardSingleRow[]
   const groups = groupBy(singleRows, (row) => {
     // Group values first by attribute, then token
     const values = swapLevels(row.statsValues)
