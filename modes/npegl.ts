@@ -1,16 +1,21 @@
 import {
-  isTotalRow,
   type AbsRelSeq,
+  type PhraseLevelDisjunctionRow,
+  type SingleRow,
   type StatisticsProcessed,
 } from "@/core/statistics/statistics.types"
 import { injectionKeys } from "@/injection"
-import { groupBy } from "lodash-es"
+import { groupBy, mapValues } from "lodash-es"
 import type { App } from "vue"
 
 export default async function install(app: App) {
   app.provide(injectionKeys.statisticsPostprocess, npeglStatisticsPostprocess)
   app.provide(injectionKeys.attribute.listStringifiers, {
     npeglStringify: catToString,
+  })
+  app.provide(injectionKeys.attribute.cqpStringifiers, {
+    npeglCQP: (tokens) =>
+      "(" + tokens.map((item) => (item ? `_.e_cat="${item}"` : "!_.e_cat")).join(" | ") + ")",
   })
 }
 
@@ -29,8 +34,9 @@ function npeglStatisticsPostprocess(result: StatisticsProcessed): StatisticsProc
 
   // Group rows that have the same representation of the e_cat attribute (e.g. [a:1 a:1] == [a:1])
   // Skip the totals row
-  const groups = groupBy(rows.slice(1), (row) => {
-    if (isTotalRow(row)) return Symbol()
+  const singleRows = rows.slice(1) as SingleRow[]
+  const groups = groupBy(singleRows, (row) => {
+    // Group values first by attribute, then token
     const values = swapLevels(row.statsValues)
     const repr = (attr: string) =>
       attr == "e_cat" ? catToString(values[attr].flat()) : values[attr].flat().join(" ")
@@ -38,29 +44,28 @@ function npeglStatisticsPostprocess(result: StatisticsProcessed): StatisticsProc
   })
 
   // Merge the rows in each group
-  const output = Object.values(groups).map((group) =>
-    group.reduce((agg, row) => {
-      // Sum up frequencies
+  const output = Object.values(groups).map((group) => {
+    // Convert to phrase-level disjunction rows
+    const rowsNew: PhraseLevelDisjunctionRow[] = group.map((row) => ({
+      ...row,
+      isPhraseLevelDisjunction: true,
+      statsValues: [row.statsValues],
+    }))
+    // Sum up frequencies
+    return rowsNew.reduce((agg, row) => {
       agg.total = add(agg.total, row.total)
-      for (const corpusId in row.count) {
-        agg.count[corpusId] = add(agg.count[corpusId] || [0, 0], row.count[corpusId])
-      }
+      agg.count = mapValues(row.count, (val, corpusId) => add(agg.count[corpusId], val))
+      agg.statsValues.push(...row.statsValues)
+      return agg
+    })
+  })
 
-      // @ts-expect-error we have to let Korp know that the cqp expression we need to create
-      // is like [] | [] | [], which Korp doesn't have a natural way to handle.
-      agg.isPhraseLevelDisjunction = true
-      // @ts-expect-error Usually a Record[], but for NPEGL a Record[][] to enable phrase-level disjunction.
-      agg.statsValues.push(row.statsValues)
+  // Re-sort after merging
+  output.sort((a, b) => b.total[0] - a.total[0])
+  // Add total row on top
+  const rowsNew = [rows[0], ...output]
 
-      // Include other things from row that are not yet in agg (rowId, formattedValue?)
-      return { ...row, ...agg }
-    }),
-  )
-
-  // Add total row on top.
-  output.unshift(rows[0])
-
-  return { rows: output, params }
+  return { rows: rowsNew, params }
 }
 
 /** Sum the abs/rel frequencies of two cells */
