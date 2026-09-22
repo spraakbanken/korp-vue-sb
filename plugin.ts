@@ -36,6 +36,13 @@ export default async function createPlugin(options: {
     import("./fontawesome")
   }
 
+  // Lab mode
+  // Pick help links for normal/lab mode
+  if (settings.navigation?.help_links)
+    settings.navigation.help_links = settings.navigation.help_links.filter(
+      (link) => !("lab" in link) || !!link.lab == !!import.meta.env.VITE_LAB,
+    )
+
   // Mode-specific configuration
 
   if (mode == "default") {

@@ -70,16 +70,29 @@ navigation:
       url:
         swe: https://sprakbanken.se/om/referera-till-oss#Korp
         eng: https://sprakbanken.se/en/about/how-to-cite#Korp
-  links:
     - label:
         swe: Korplabb
-        eng: Korp lab
+        eng: Korp Lab
       title:
         swe: Testa nya funktioner i Korplabbet
         eng: Try out new features in the Korp Lab
       url:
         swe: https://spraakbanken.gu.se/korplabb/
         eng: https://spraakbanken.gu.se/korplabb/#?lang=eng
+      external: false
+      lab: false # A custom field used by plugin code to filter links
+    - label:
+        swe: Vanliga Korp
+        eng: Normal Korp
+      title:
+        swe: Lämna Korplabbet och gå till standardversionen av Korp
+        eng: Leave the Korp Lab and use the official version of Korp
+      url:
+        swe: https://spraakbanken.gu.se/korp/
+        eng: https://spraakbanken.gu.se/korp/#?lang=eng
+      external: false
+      lab: true # A custom field used by plugin code to filter links
+  links: []
 
 frontpage:
   corpus_updates: true
