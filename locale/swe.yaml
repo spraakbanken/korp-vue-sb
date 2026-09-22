@@ -1,3 +1,8 @@
+lab: Labb
+lab.heading: Detta är Korplabbet.
+lab.help: Här testar vi ibland ny funktionalitet för Korp.
+lab.link: Gå till vanliga Korp
+
 mink.empty: Inga korpusar
 mink.empty.text: Det här är Mink-läget i Korp. Du har inga korpusar att utforska.
 mink.empty.create: Skapa egna korpusar i {mink}

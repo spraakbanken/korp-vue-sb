@@ -1,3 +1,8 @@
+lab: Lab
+lab.heading: This is the Korp lab.
+lab.help: We use it for testing new functionality sometimes.
+lab.link: Go to normal Korp
+
 mink.empty: No corpora
 mink.empty.text: This is the Mink mode of Korp. You do not have any corpora to explore.
 mink.empty.create: Create your own corpora in {mink}
