@@ -53,8 +53,11 @@ export default async function createPlugin(options: {
   }
 
   if (mode == "npegl") {
-    // NPEGL is not supported yet, redirect to the old version
-    window.location.href = window.location.href.replace(/korp(labb)?\b/, "korp9")
+    const { default: installNpegl } = await import("@instance/modes/npegl")
+    return (app) => {
+      installCommon(app)
+      installNpegl(app)
+    }
   }
 
   // Default installer

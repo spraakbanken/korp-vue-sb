@@ -1,0 +1,144 @@
+"Noun (N)":
+  exact: "N:[0-9]+"
+  match: "N([.][^:]+)?:[0-9]+"
+"Common noun (N.C)":
+  exact: "N[.]C:[0-9]+"
+  match: "N[.]C:[0-9]+"
+"Proper noun (N.P)":
+  exact: "N[.]P:[0-9]+"
+  match: "N[.]P:[0-9]+"
+'Nordic "hinn" (H)':
+  exact: "H:[0-9]+"
+  match: "H:[0-9]+"
+"Personal pronoun (Per)":
+  exact: "Per:[0-9]+"
+  match: "Per:[0-9]+"
+"Demonstrative pronoun (Dem)":
+  exact: "Dem:[0-9]+"
+  match: "Dem:[0-9]+"
+"Possesive pronoun (Poss)":
+  exact: "Poss:[0-9]+"
+  match: "Poss:[0-9]+"
+"(Strong) Quantifier (Q)":
+  exact: "Q:[0-9]+"
+  match: "Q:[0-9]+"
+"Modifier (Md)":
+  exact: "Md:[0-9]+"
+  match: "Md([.][^:]+)?:[0-9]+"
+"Positional predicate (Md.Pos)":
+  exact: "Md[.]Pos:[0-9]+"
+  match: "Md[.]Pos:[0-9]+"
+"Numeral or weak quantifier (Md.Nu/WQ)":
+  exact: "Md[.]Nu/WQ:[0-9]+"
+  match: "Md[.]Nu/WQ([.][^:]+)?:[0-9]+"
+"Cardinal numeral (Md.Nu/WQ.Nu)":
+  exact: "Md[.]Nu/WQ[.]Nu:[0-9]+"
+  match: "Md[.]Nu/WQ[.]Nu:[0-9]+"
+"Weak quantifier (Md.Nu/WQ.WQ)":
+  exact: "Md[.]Nu/WQ[.]WQ:[0-9]+"
+  match: "Md[.]Nu/WQ[.]WQ:[0-9]+"
+"Adjective (Md.Aj)":
+  exact: "Md[.]Aj:[0-9]+"
+  match: "Md[.]Aj([.][^:]+)?:[0-9]+"
+"Functional adjective (Md.Aj.Fn)":
+  exact: "Md[.]Aj[.]Fn:[0-9]+"
+  match: "Md[.]Aj[.]Fn([.][^:]+)?:[0-9]+"
+"Ordinal numeral (Md.Aj.Fn.Ord)":
+  exact: "Md[.]Aj[.]Fn[.]Ord:[0-9]+"
+  match: "Md[.]Aj[.]Fn[.]Ord:[0-9]+"
+"Defective adjective (Md.Aj.Fn.Df)":
+  exact: "Md[.]Aj[.]Fn[.]Df:[0-9]+"
+  match: "Md[.]Aj[.]Fn[.]Df:[0-9]+"
+"Determiner-like adjective (Md.Aj.Fn.Dt)":
+  exact: "Md[.]Aj[.]Fn[.]Dt:[0-9]+"
+  match: "Md[.]Aj[.]Fn[.]Dt:[0-9]+"
+"Lexical adjective (Md.Aj.Lx)":
+  exact: "Md[.]Aj[.]Lx:[0-9]+"
+  match: "Md[.]Aj[.]Lx([.][^:]+)?:[0-9]+"
+"Past participle (Md.Aj.Lx.Pst)":
+  exact: "Md[.]Aj[.]Lx[.]Pst:[0-9]+"
+  match: "Md[.]Aj[.]Lx[.]Pst:[0-9]+"
+"Present participle (Md.Aj.Lx.Pre)":
+  exact: "Md[.]Aj[.]Lx[.]Pre:[0-9]+"
+  match: "Md[.]Aj[.]Lx[.]Pre:[0-9]+"
+"Other derived adjective (Md.Aj.Lx.Der)":
+  exact: "Md[.]Aj[.]Lx[.]Der:[0-9]+"
+  match: "Md[.]Aj[.]Lx[.]Der:[0-9]+"
+"Prototypical adjective (Md.Aj.Lx.Pro)":
+  exact: "Md[.]Aj[.]Lx[.]Pro:[0-9]+"
+  match: "Md[.]Aj[.]Lx[.]Pro:[0-9]+"
+"Noun phrase (NP)":
+  exact: "NP:[0-9]+"
+  match: "NP:[0-9]+"
+"Adjectival associate (Assoc)":
+  exact: "Assoc:[0-9]+"
+  match: "Assoc:[0-9]+"
+"Genitival phrase (GenP)":
+  exact: "GenP:[0-9]+"
+  match: "GenP:[0-9]+"
+"Prepositional phrase (PP)":
+  exact: "PP:[0-9]+"
+  match: "PP:[0-9]+"
+"Apposition (App)":
+  exact: "App:[0-9]+"
+  match: "App:[0-9]+"
+"Relative clause (RC)":
+  exact: "RC:[0-9]+"
+  match: "RC:[0-9]+"
+"Complement clause (CC)":
+  exact: "CC:[0-9]+"
+  match: "CC([.][^:]+)?:[0-9]+"
+"Finite complement clause (CC.Fi)":
+  exact: "CC[.]Fi:[0-9]+"
+  match: "CC[.]Fi:[0-9]+"
+"Non-finite complement clause (CC.Nf)":
+  exact: "CC[.]Nf:[0-9]+"
+  match: "CC[.]Nf:[0-9]+"
+"Adverbial (Adv)":
+  exact: "Adv:[0-9]+"
+  match: "Adv:[0-9]+"
+"Modifier of modifier (Mdmd)":
+  exact: "Mdmd:[0-9]+"
+  match: "Mdmd:[0-9]+"
+"Complement of modifier (Mdcm)":
+  exact: "Mdcm:[0-9]+"
+  match: "Mdcm([.][^:]+)?:[0-9]+"
+"Nominal complement of modifier (Mdcm.N)":
+  exact: "Mdcm[.]N:[0-9]+"
+  match: "Mdcm[.]N:[0-9]+"
+"Prepositional complement of modifier (Mdcm.P)":
+  exact: "Mdcm[.]P:[0-9]+"
+  match: "Mdcm[.]P:[0-9]+"
+"Complement of degree element (Dgcm)":
+  exact: "Dgcm:[0-9]+"
+  match: "Dgcm([.][^:]+)?:[0-9]+"
+"Bare complement of degree element (Dgcm.Br)":
+  exact: "Dgcm[.]Br:[0-9]+"
+  match: "Dgcm[.]Br:[0-9]+"
+"Marked complement of degree element (Dgcm.Mk)":
+  exact: "Dgcm[.]Mk:[0-9]+"
+  match: "Dgcm[.]Mk:[0-9]+"
+"Coordinator (&)":
+  exact: "&:[0-9]+"
+  match: "&([.][^:]+)?:[0-9]+"
+"Coordinator of Noun phrases (&.NP)":
+  exact: "&[.]NP:[0-9]+"
+  match: "&[.]NP:[0-9]+"
+"Coordinator of Nouns (&.N)":
+  exact: "&[.]N:[0-9]+"
+  match: "&[.]N:[0-9]+"
+"Coordinator of Possessives (&.Poss)":
+  exact: "&[.]Poss:[0-9]+"
+  match: "&[.]Poss:[0-9]+"
+"Coordinator of Adjectives (&.Aj)":
+  exact: "&[.]Aj:[0-9]+"
+  match: "&[.]Aj:[0-9]+"
+"Coordinator of Numericals (&.Nu)":
+  exact: "&[.]Nu:[0-9]+"
+  match: "&[.]Nu:[0-9]+"
+"Initial part of a discontinuous coordinator (&.Init)":
+  exact: "&[.]Init:[0-9]+"
+  match: "&[.]Init:[0-9]+"
+"Other or uncertain coordinator (&.Other)":
+  exact: "&[.]Other:[0-9]+"
+  match: "&[.]Other:[0-9]+"
