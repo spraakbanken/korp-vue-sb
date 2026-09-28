@@ -1,18 +1,26 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n"
 import { vPopover } from "@/bootstrap"
-import ColorSchemeImg from "@/components/ColorSchemeImg.vue"
 import korpSloganSwe from "@instance/assets/korp_slogan.svg"
 import korpSloganSweLight from "@instance/assets/korp_slogan_light.svg"
 import korpSloganEng from "@instance/assets/korp_slogan_en.svg"
 import korpSloganEngLight from "@instance/assets/korp_slogan_en_light.svg"
 import { computed } from "vue"
+import { useDark } from "@/components/useDark"
+import { locObj } from "@/core/i18n"
 
+const isDark = useDark()
 const { locale, t } = useI18n()
 
 /** Link to homepage, i.e. without any hash params */
 const selfUrl = window.location.href.replace(/#.*/, "")
 const isLab = import.meta.env.VITE_LAB
+
+const src = computed(() =>
+  isDark.value
+    ? locObj({ swe: korpSloganSweLight, eng: korpSloganEngLight })
+    : locObj({ swe: korpSloganSwe, eng: korpSloganEng }),
+)
 
 // TODO Improve keyboard navigation; this link appears last in tab order
 const labTooltip = computed(
@@ -26,12 +34,7 @@ const labTooltip = computed(
   <div>
     <div class="d-inline-block position-relative">
       <a :href="selfUrl">
-        <ColorSchemeImg
-          :dark-src="locale == 'swe' ? korpSloganSweLight : korpSloganEngLight"
-          :light-src="locale == 'swe' ? korpSloganSwe : korpSloganEng"
-          alt="Korp"
-          class="align-self-end"
-        />
+        <img :src alt="Korp" class="align-self-end" />
       </a>
 
       <!-- Lab mode indicator -->
