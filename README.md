@@ -4,6 +4,4 @@ This repo contains [Språkbanken](https://sprakbanken.se/)'s config and extensio
 to [korp-vue](https://github.com/spraakbanken/korp-vue),
 the successor of [korp-frontend](https://github.com/spraakbanken/korp-frontend).
 
-**Status: close to first release**
-
-Use it at https://spraakbanken.gu.se/korplabb/10/
+Use it at https://spraakbanken.gu.se/korp/
