@@ -1,14 +1,19 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useI18n } from "vue-i18n"
+
+const { locale } = useI18n()
+</script>
 
 <template>
   <div>
-    <div class="alert alert-danger d-inline-block m-0 p-1 px-2">
-      <h6 class="m-0">
-        <fa-icon icon="fa-solid fa-warning" />
-        Work in progress
-      </h6>
-      <div><a href="https://github.com/spraakbanken/korp-vue-sb">About this version</a></div>
-      <div><a href="https://spraakbanken.gu.se/korp/">Use normal Korp</a></div>
+    <div class="alert alert-warning d-inline-block m-0 p-1 px-2 text-start">
+      <h6 class="m-0">{{ $t("banner_v10.heading") }}</h6>
+      <div>{{ $t("banner_v10.help") }}</div>
+      <div>
+        <a :href="`https://spraakbanken.gu.se/korp9/#?lang=${locale}`">{{
+          $t("banner_v10.link_v9")
+        }}</a>
+      </div>
     </div>
   </div>
 </template>

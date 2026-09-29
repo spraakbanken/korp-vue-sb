@@ -3,6 +3,10 @@ lab.heading: Detta är Korplabbet.
 lab.help: Här testar vi ibland ny funktionalitet för Korp.
 lab.link: Gå till vanliga Korp
 
+banner_v10.heading: Saknar du gamla Korp?
+banner_v10.help: Detta är version 10 av Korps gränssnitt.
+banner_v10.link_v9: Använd Korp 9
+
 mink.empty: Inga korpusar
 mink.empty.text: Det här är Mink-läget i Korp. Du har inga korpusar att utforska.
 mink.empty.create: Skapa egna korpusar i {mink}
