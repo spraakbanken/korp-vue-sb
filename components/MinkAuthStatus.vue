@@ -36,16 +36,16 @@ function onEmptyDialogReady(dialog: ConfirmDialog) {
     disable-cancel
   >
     <img src="@instance/assets/mink.svg" alt="Mink" class="d-block mx-auto mb-3" />
-    <p>{{ $t("mink.login.help") }}</p>
-    <p class="mb-0">
+    <p class="font-body">{{ $t("mink.login.help") }}</p>
+    <p class="mb-0 font-body">
       <a :href="$t('mink.link.url')" target="_blank">{{ $t("mink.link.label") }}</a>
     </p>
   </ModalDialog>
 
   <ModalDialog @setup="onEmptyDialogReady" :title="$t('mink.empty')" size="md" disable-cancel>
     <img src="@instance/assets/mink.svg" alt="Mink" class="d-block mx-auto mb-3" />
-    <p>{{ $t("mink.empty.text") }}</p>
-    <p class="mb-0">
+    <p class="font-body">{{ $t("mink.empty.text") }}</p>
+    <p class="mb-0 font-body">
       <i18n-t keypath="mink.empty.create" scope="global">
         <template #mink>
           <a :href="$t('mink.link.url')" target="_blank">Mink</a>
