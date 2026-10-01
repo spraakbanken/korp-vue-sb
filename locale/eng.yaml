@@ -3,9 +3,9 @@ lab.heading: This is the Korp lab.
 lab.help: We use it for testing new functionality sometimes.
 lab.link: Go to normal Korp
 
-banner_v10.heading: Looking for old Korp?
-banner_v10.help: This is version 10 of the Korp interface.
-banner_v10.link_v9: Use Korp 9
+banner_v10.heading: Need to use the old Korp?
+banner_v10.help: ""
+banner_v10.link_v9: Go to the previous version
 
 mink.empty: No corpora
 mink.empty.text: This is the Mink mode of Korp. You do not have any corpora to explore.

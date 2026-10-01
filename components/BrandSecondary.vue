@@ -6,7 +6,7 @@ const { locale } = useI18n()
 
 <template>
   <div>
-    <div class="alert alert-warning d-inline-block m-0 p-1 px-2 text-start">
+    <div class="alert alert-warning d-inline-block m-0 py-2 text-start">
       <h6 class="m-0">{{ $t("banner_v10.heading") }}</h6>
       <div>{{ $t("banner_v10.help") }}</div>
       <div>
