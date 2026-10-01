@@ -4,7 +4,6 @@ import AuthFedStatus from "@/auth/federated/AuthFedStatus.vue"
 import { useAuth } from "@/auth/useAuth"
 import ModalDialog, { type ConfirmDialog } from "@/components/ModalDialog.vue"
 import { corpusListing } from "@/core/corpora/corpusListing"
-import { onMounted } from "vue"
 
 const auth = useAuth()
 
@@ -13,24 +12,24 @@ let loginDialog: ConfirmDialog | undefined
 /** Controls the dialog to show when there are no corpora */
 let emptyDialog: ConfirmDialog | undefined
 
-onMounted(() => {
-  // Show modal if not logged in
-  if (!auth.isLoggedIn()) {
-    loginDialog?.reveal()
-  } else if (!corpusListing.corpora.length) {
-    emptyDialog?.reveal()
-  }
-
+function onLoginDialogReady(dialog: ConfirmDialog) {
+  loginDialog = dialog
+  if (!auth.isLoggedIn()) loginDialog.reveal()
   // Go to login if user confirms
   loginDialog?.onConfirm(() => auth.login())
-})
+}
+
+function onEmptyDialogReady(dialog: ConfirmDialog) {
+  emptyDialog = dialog
+  if (auth.isLoggedIn() && !corpusListing.corpora.length) emptyDialog.reveal()
+}
 </script>
 
 <template>
   <AuthFedStatus />
 
   <ModalDialog
-    @setup="loginDialog = $event"
+    @setup="onLoginDialogReady"
     :title="$t('auth.login')"
     size="md"
     :confirm-label="$t('auth.login')"
@@ -43,7 +42,7 @@ onMounted(() => {
     </p>
   </ModalDialog>
 
-  <ModalDialog @setup="emptyDialog = $event" :title="$t('mink.empty')" size="md" disable-cancel>
+  <ModalDialog @setup="onEmptyDialogReady" :title="$t('mink.empty')" size="md" disable-cancel>
     <img src="@instance/assets/mink.svg" alt="Mink" class="d-block mx-auto mb-3" />
     <p>{{ $t("mink.empty.text") }}</p>
     <p class="mb-0">
