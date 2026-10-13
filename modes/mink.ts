@@ -18,24 +18,13 @@ export default async function install(app: App) {
   app.provide(injectionKeys.auth, auth)
 
   // Use custom Korp backend instance
-  settings.korp_backend_url = "https://spraakbanken3.it.gu.se/korp"
+  settings.korp_backend_url = "https://spraakbanken3.it.gu.se/korp/v9"
 
   settings.map_enabled = true
 
   settings.corpus_info_link = {
     url_template: "https://spraakbanken.gu.se/mink/library/corpus/%s",
     label: { swe: "Öppna i Mink", eng: "Open in Mink" },
-  }
-
-  // Get user's corpus ids from Mink backend
-  settings.get_corpus_ids = async () => {
-    if (!auth.isLoggedIn()) return undefined
-    // Fetch user's corpus ids from Mink
-    const minkUrl = "https://spraakbanken2.it.gu.se/ws/mink/v3"
-    const conf = { headers: auth.getAuthorizationHeader() }
-    const response = await fetch(`${minkUrl}/list-korp-corpora`, conf)
-    const data = await response.json()
-    return data.resources
   }
 
   settings.description = {
