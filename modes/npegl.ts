@@ -20,13 +20,16 @@ export default async function install(app: App) {
 }
 
 /** ABBA => ABA */
-const filterDuplicates = (array: string[]) =>
-  array.reduce((agg, val) => (agg[agg.length - 1] == val ? agg : [...agg, val]), [] as string[])
+const filterDuplicates = (array: (string | null)[]) =>
+  array.reduce(
+    (agg, val) => (agg[agg.length - 1] == val ? agg : [...agg, val]),
+    [] as (string | null)[],
+  )
 
 /** [a:1 a:1 b a:1 a:2] => "a b a a" */
-export const catToString = (array: string[]) =>
+export const catToString = (array: (string | null)[]) =>
   filterDuplicates(array)
-    .map((item) => item.split(":")[0])
+    .map((item) => item?.split(":")[0])
     .join(" ")
 
 function npeglStatisticsPostprocess(result: StatisticsProcessed): StatisticsProcessed {
