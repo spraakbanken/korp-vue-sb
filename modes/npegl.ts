@@ -14,8 +14,7 @@ export default async function install(app: App) {
     npeglStringify: catToString,
   })
   app.provide(injectionKeys.attribute.cqpStringifiers, {
-    npeglCQP: (tokens) =>
-      "(" + tokens.map((item) => (item ? `_.e_cat="${item}"` : "!_.e_cat")).join(" | ") + ")",
+    npeglCQP: (value) => (value ? `_.e_cat="${value}"` : "!_.e_cat"),
   })
 }
 
@@ -40,7 +39,7 @@ function npeglStatisticsPostprocess(result: StatisticsProcessed): StatisticsProc
   const singleRows = rows.slice(1) as StandardSingleRow[]
   const groups = groupBy(singleRows, (row) => {
     // Group values first by attribute, then token
-    const values = swapLevels(row.statsValues)
+    const values = swapLevels(row.plainValue)
     const repr = (attr: string) =>
       attr == "e_cat" ? catToString(values[attr].flat()) : values[attr].flat().join(" ")
     return params.reduceVals.map(repr).join("/")
@@ -52,13 +51,13 @@ function npeglStatisticsPostprocess(result: StatisticsProcessed): StatisticsProc
     const rowsNew: PhraseLevelDisjunctionRow[] = group.map((row) => ({
       ...row,
       isPhraseLevelDisjunction: true,
-      statsValues: [row.statsValues],
+      plainValue: [row.plainValue],
     }))
     // Sum up frequencies
     return rowsNew.reduce((agg, row) => {
       agg.total = add(agg.total, row.total)
       agg.count = mapValues(row.count, (val, corpusId) => add(agg.count[corpusId], val))
-      agg.statsValues.push(...row.statsValues)
+      agg.plainValue.push(...row.plainValue)
       return agg
     })
   })
