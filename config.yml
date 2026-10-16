@@ -106,17 +106,20 @@ navigation:
 frontpage:
   corpus_updates: true
 
+# Attributes that should be grouped over colon suffixes in statistics
+# ("foo:1" and "foo:2" should count as "foo")
+# The comments here indicate why each attribute uses suffixes
 group_statistics:
-  - saldo
-  - prefix
-  - suffix
-  - lex
-  - lemma
-  - sense
-  - text_swefn
-  - text_blingbring
-  - word-prediction--kb-bert
-  - e_cat
+  - saldo # MWE (i.e. the position of the first token in the same MWE)
+  - prefix # MWE?
+  - suffix # MWE?
+  - lex # MWE
+  - lemma # MWE
+  - sense # MWE and ranked
+  - text_swefn # ranked
+  - text_blingbring # ranked
+  - word-prediction--kb-bert # ranked
+  - e_cat # NPEGL-specific
 
 statistics_search_default: false
 
