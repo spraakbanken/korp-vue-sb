@@ -9,7 +9,7 @@ import { groupBy, mapValues } from "lodash-es"
 import type { App } from "vue"
 
 export default async function install(app: App) {
-  app.provide(injectionKeys.statisticsPostprocess, npeglStatisticsPostprocess)
+  app.provide(injectionKeys.hook.statisticsPostprocess, npeglStatisticsPostprocess)
   app.provide(injectionKeys.attribute.listStringifiers, {
     npeglStringify: catToString,
   })

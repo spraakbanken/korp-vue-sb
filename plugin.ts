@@ -27,6 +27,14 @@ export default async function createPlugin(options: {
     app.provide(componentInjectionKeys.BrandSecondary, BrandSecondary)
 
     // Provide named components and functions that can be referenced from config
+    app.provide(injectionKeys.hook.afterInit, async ({ settings }) => {
+      // Modify corpus config with new changes
+      Object.values(settings.corpora).forEach((corpus) => {
+        if (corpus.attributes["lemma"]) corpus.attributes["lemma"].stringify = "lemma"
+        if (corpus.attributes["compwf"]) corpus.attributes["compwf"].stringify = "compwf"
+        if (corpus.attributes["e_cat"]) corpus.attributes["e_cat"].escape = false
+      })
+    })
     app.provide(injectionKeys.search.widgets, searchComponents) // attribute extended_component
     app.provide(injectionKeys.attribute.formatters, formatters) // attribute sidebar_component
     app.provide(injectionKeys.attribute.stringifiers, getStringifiers(t))
