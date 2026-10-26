@@ -12,7 +12,7 @@ mink.empty.text: Det här är Mink-läget i Korp. Du har inga korpusar att utfor
 mink.empty.create: Skapa egna korpusar i {mink}
 mink.login.help: Det här är Mink-läget i Korp. Endast inloggade användare kan använda det här läget.
 mink.link.label: Läs mer om Mink
-mink.link.url: https://spraakbanken.gu.se/mink/
+mink.link.url: https://sprakbanken.se/plattformar/mink
 
 msd.menu: Visa morfosyntaktiska deskriptorer
 

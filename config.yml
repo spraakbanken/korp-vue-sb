@@ -4,7 +4,7 @@ description:
     <p>
       Search in large amounts of texts, including newspapers, novels and social media.
       The text collections, <em>corpora</em>, are annotated for linguistic features and other attributes.
-      Please refer to the <a href="https://spraakbanken.gu.se/en/tools/korp/user-manual" target="_blank">User manual</a> for more information.
+      Please refer to the <a href="https://sprakbanken.se/en/platforms/korp/manual" target="_blank">User manual</a> for more information.
     </p>
     <p>
       If you are using Korp in your work, please <a href="https://sprakbanken.se/en/about/how-to-cite#Korp" target="_blank">cite us</a>.
@@ -15,7 +15,7 @@ description:
     <p>
       Här kan du söka i stora mängder text från bland annat dagstidningar, skönlitteratur och sociala medier.
       Textsamlingarna, <em>korpusarna</em>, är annoterade med språkliga och andra attribut.
-      Se gärna <a href="https://spraakbanken.gu.se/verktyg/korp/anvandarhandledning" target="_blank">Användarhandledningen</a> för mer information.
+      Se gärna <a href="https://sprakbanken.se/plattformar/korp/manual" target="_blank">Användarhandledningen</a> för mer information.
     </p>
     <p>
       Om du använder Korp i ditt arbete ber vi dig <a href="https://sprakbanken.se/om/referera-till-oss#Korp" target="_blank">referera till oss</a>.
@@ -56,14 +56,14 @@ navigation:
         swe: Om Korp
         eng: About Korp
       url:
-        swe: https://spraakbanken.gu.se/verktyg/korp
-        eng: https://spraakbanken.gu.se/en/tools/korp
+        swe: https://sprakbanken.se/plattformar/korp
+        eng: https://sprakbanken.se/en/platforms/korp
     - label:
         swe: Användarhandledning
         eng: User manual
       url:
-        swe: https://spraakbanken.gu.se/verktyg/korp/anvandarhandledning
-        eng: https://spraakbanken.gu.se/en/tools/korp/user-manual
+        swe: https://sprakbanken.se/plattformar/korp/manual
+        eng: https://sprakbanken.se/en/platforms/korp/manual
     - label:
         swe: Hur citerar jag Korp?
         eng: How to cite Korp

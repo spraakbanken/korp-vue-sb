@@ -60,9 +60,9 @@
     swe: Perfektkonstruktioner i dependensstrukturer
     eng: Present perfects using dependency structure
   hint:
-    swe: Se <a href="https://spraakbanken.gu.se/blogg/20231009-korp-tips-and-tricks-using-cqp-labels-to-search-for-dependency-structures">blogginlägg</a>
+    swe: Se <a href="https://sprakbanken.se/aktuellt/blogg/2023-10-09-korp-tips-and-tricks-using-cqp-labels-to-search-for-dependency-structures">blogginlägg</a>
     eng:
-      See <a href="https://spraakbanken.gu.se/en/blog/20231009-korp-tips-and-tricks-using-cqp-labels-to-search-for-dependency-structures">blog
+      See <a href="https://sprakbanken.se/en/news-and-events/blog/2023-10-09-korp-tips-and-tricks-using-cqp-labels-to-search-for-dependency">blog
       post</a>
   params:
     search_tab: 2
@@ -71,7 +71,7 @@
       | deprel="IV")]
 - label: Grattis på (substantiv)
   hint: 'Tips: Spara sökningen och jämför med en liknande men med "till" istället,
-    se avsnittet <em>Jämförelser</em> i <a href="https://spraakbanken.gu.se/verktyg/korp/anvandarhandledning">användarhandledningen</a>'
+    se avsnittet <em>Jämförelser</em> i <a href="https://sprakbanken.se/plattformar/korp/manual">användarhandledningen</a>'
   params:
     search_tab: 1
     search: cqp

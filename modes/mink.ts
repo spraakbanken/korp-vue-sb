@@ -48,7 +48,7 @@ export default async function install(app: App) {
           korpusar i läget är privata och kan endast ses av dig.
         </p>
         <p>Klicka i korpusväljaren ovanför för att göra ditt materialurval.</p>
-        <p><a href="https://spraakbanken.gu.se/mink/">Läs mer om Mink</a></p>
+        <p><a href="https://sprakbanken.se/plattformar/mink">Läs mer om Mink</a></p>
       </div>
     `,
     eng: html`
@@ -60,7 +60,7 @@ export default async function install(app: App) {
           corpora in this mode are private and can only be seen by you.
         </p>
         <p>Click the corpus selector above to choose material.</p>
-        <p><a href="https://spraakbanken.gu.se/mink/">Read more about Mink</a></p>
+        <p><a href="https://sprakbanken.se/en/platforms/mink">Read more about Mink</a></p>
       </div>
     `,
   }

@@ -12,7 +12,7 @@ mink.empty.text: This is the Mink mode of Korp. You do not have any corpora to e
 mink.empty.create: Create your own corpora in {mink}
 mink.login.help: This is the Mink mode of Korp. Only logged in users with access to Mink can use this mode.
 mink.link.label: Learn more about Mink
-mink.link.url: https://spraakbanken.gu.se/mink/
+mink.link.url: https://sprakbanken.se/en/platforms/mink
 
 msd.menu: Show morpho-syntactic descriptors
 
