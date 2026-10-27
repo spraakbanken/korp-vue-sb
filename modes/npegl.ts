@@ -13,9 +13,6 @@ export default async function install(app: App) {
   app.provide(injectionKeys.attribute.listStringifiers, {
     npeglStringify: catToString,
   })
-  app.provide(injectionKeys.attribute.cqpStringifiers, {
-    npeglCQP: (value) => (value ? `_.e_cat="${value}"` : "!_.e_cat"),
-  })
 }
 
 /** ABBA => ABA */
