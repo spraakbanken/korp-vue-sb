@@ -1,5 +1,5 @@
+import type { FrequencyCounts } from "@/core/backend/korp-api"
 import {
-  type AbsRelSeq,
   type PhraseLevelDisjunctionRow,
   type StandardSingleRow,
   type StatisticsProcessed,
@@ -36,7 +36,7 @@ function npeglStatisticsPostprocess(result: StatisticsProcessed): StatisticsProc
   const singleRows = rows.slice(1) as StandardSingleRow[]
   const groups = groupBy(singleRows, (row) => {
     // Group values first by attribute, then token
-    const values = swapLevels(row.plainValue)
+    const values = row.row.value
     const repr = (attr: string) =>
       attr == "e_cat" ? catToString(values[attr].flat()) : values[attr].flat().join(" ")
     return params.reduceVals.map(repr).join("/")
@@ -49,18 +49,22 @@ function npeglStatisticsPostprocess(result: StatisticsProcessed): StatisticsProc
       ...row,
       isPhraseLevelDisjunction: true,
       plainValue: [row.plainValue],
+      values: [row.row.value],
     }))
     // Sum up frequencies
     return rowsNew.reduce((agg, row) => {
-      agg.total = add(agg.total, row.total)
-      agg.count = mapValues(row.count, (val, corpusId) => add(agg.count[corpusId], val))
+      agg.row.combined = add(agg.row.combined, row.row.combined)
+      agg.row.corpora = mapValues(row.row.corpora, (val, corpusId) =>
+        add(agg.row.corpora[corpusId], val),
+      )
       agg.plainValue.push(...row.plainValue)
+      agg.values.push(row.row.value)
       return agg
     })
   })
 
   // Re-sort after merging
-  output.sort((a, b) => b.total[0] - a.total[0])
+  output.sort((a, b) => b.row.combined.absolute - a.row.combined.absolute)
   // Add total row on top
   const rowsNew = [rows[0], ...output]
 
@@ -68,16 +72,7 @@ function npeglStatisticsPostprocess(result: StatisticsProcessed): StatisticsProc
 }
 
 /** Sum the abs/rel frequencies of two cells */
-const add = (arr1: AbsRelSeq, arr2: AbsRelSeq): AbsRelSeq => [arr1[0] + arr2[0], arr1[1] + arr2[1]]
-
-/** Convert a list of records to a record of lists (r[a][b] is now in r[b][a]). */
-function swapLevels<T>(obj: Record<string, T>[]): Record<string, T[]> {
-  const newObj: Record<string, T[]> = {}
-  for (const key1 in obj) {
-    for (const key2 in obj[key1]) {
-      newObj[key2] ??= []
-      newObj[key2][key1] = obj[key1][key2]
-    }
-  }
-  return newObj
-}
+const add = (a: FrequencyCounts, b: FrequencyCounts): FrequencyCounts => ({
+  absolute: a.absolute + b.absolute,
+  relative: a.relative + b.relative,
+})
