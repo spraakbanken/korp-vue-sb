@@ -188,18 +188,21 @@ word_picture_conf:
       - rel: pre_modifier
         color: "#fff3d8"
         field_reverse: true
+        alt_label: pos.nn
     - - rel: adverbial2
         color: "#f7d1e4"
       - _
   adverb:
-    - - _
-      - rel: adverbial
+    - - rel: adverbial
         color: "#fff3d8"
         field_reverse: true
+        alt_label: pos.vb
+      - _
     - - _
       - rel: adverbial2
         color: "#f7d1e4"
         field_reverse: true
+        alt_label: pos.jj
   preposition:
     - - _
       - rel: preposition_rel
