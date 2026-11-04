@@ -40,6 +40,30 @@ export default async function createPlugin(options: {
     app.provide(injectionKeys.attribute.stringifiers, getStringifiers(t))
     app.provide(injectionKeys.readers, readers)
 
+    app.provide(injectionKeys.largeNumberFormatter, (locale, n) => {
+      // Utilize native formatting
+      const original = new Intl.NumberFormat(locale, { notation: "compact" }).format(n)
+      const singular = /^1\s/.test(original)
+
+      // Replace magnitude abbreviations with full words
+      if (locale == "swe")
+        return original
+          .replace("tn", "tusen")
+          .replace("mn", singular ? "miljon" : "miljoner")
+          .replace("md", singular ? "miljard" : "miljarder")
+          .replace("bn", singular ? "biljon" : "biljoner")
+
+      if (locale == "eng")
+        return original
+          .replace("K", "thousand")
+          .replace("M", "million")
+          .replace("B", "billion")
+          .replace("T", "trillion")
+
+      // Fall back to original formatting for other locales
+      return original
+    })
+
     // Add icons used in instance code
     import("./fontawesome")
   }
