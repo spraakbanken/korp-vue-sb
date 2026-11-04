@@ -32,12 +32,11 @@ function npeglStatisticsPostprocess(result: StatisticsResult) {
   // Group rows that have the same representation of the e_cat attribute (e.g. [a:1 a:1] == [a:1])
   // Skip the totals row
   const singleRows = result.rows.slice(1) as StandardSingleRow[]
+  // Group rows by attribute values, with special handling for e_cat attribute
   const groups = groupBy(singleRows, (row) => {
-    // Group values first by attribute, then token
-    const values = row.value
-    const repr = (attr: string) =>
-      attr == "e_cat" ? catToString(values[attr].flat()) : values[attr].flat().join(" ")
-    return result.reduceVals.map(repr).join("/")
+    return Object.entries(row.value)
+      .map(([attr, vals]) => (attr == "e_cat" ? catToString(vals) : vals.join(" ")))
+      .join("/")
   })
 
   // Merge the rows in each group
