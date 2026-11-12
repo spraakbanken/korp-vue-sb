@@ -34,7 +34,7 @@ const labTooltip = computed(
   <div>
     <div class="d-inline-block position-relative">
       <a :href="selfUrl">
-        <img :src alt="Korp" class="align-self-end" />
+        <h1 class="m-0"><img :src alt="Korp" class="align-self-end" /></h1>
       </a>
 
       <!-- Lab mode indicator -->

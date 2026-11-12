@@ -45,5 +45,5 @@ watch(
 </script>
 
 <template>
-  <DefaultWidget v-model="model" :attribute :operator :options />
+  <DefaultWidget :id v-model="model" :attribute :operator :options />
 </template>

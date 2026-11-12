@@ -20,7 +20,7 @@ const id = useId()
 
 <template>
   <div class="hstack gap-1">
-    <input class="form-control" v-model="model" size="10" />
+    <input :id class="form-control" v-model="model" size="10" />
 
     <!-- Help dropdown -->
     <div class="dropdown">

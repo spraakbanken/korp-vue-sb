@@ -45,5 +45,5 @@ watch(
 </script>
 
 <template>
-  <LemgramAutocompleteWidget v-model="model" :attribute :operator :options />
+  <LemgramAutocompleteWidget :id v-model="model" :attribute :operator :options />
 </template>

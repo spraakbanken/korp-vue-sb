@@ -39,7 +39,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <select class="form-select" v-model="selected">
+  <select :id class="form-select" v-model="selected">
     <option v-for="label in Object.keys(options)" :key="label">
       {{ label }}
     </option>

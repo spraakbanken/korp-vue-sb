@@ -43,7 +43,7 @@ function search(lemgram: Lemgram) {
   <DefaultFormatterItem :attribute :item :rowToken>
     <template #internalSearch>
       <tr>
-        <th>{{ $t("result.sidebar.search.complemgram") }}</th>
+        <th scope="row">{{ $t("result.sidebar.search.complemgram") }}</th>
         <td>
           <ul class="list-unstyled">
             <li v-for="(lemgram, key) in lemgrams" :key>
